@@ -21,38 +21,64 @@ hf=FindFirstFileW(srchpath,&ffdata);
 	if(hf == INVALID_HANDLE_VALUE)
 	return FALSE;
 
-wcscpy(srchpath,fname);
+//wcscpy(srchpath,fname);
 bool bSearch = true;
-	while(bSearch)
+
+	
+	FindNextFileW(hf,&ffdata);
+		wcscat(fname,ffdata.cFileName);
+	
+		if((ffdata.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
+			{
+					MessageBoxW(0,fname,fname,0);
+	
+			}
+
+		char fname1[100];
+		FindNextFileW(hf,&ffdata);
+	//	wcscat(fname,ffdata.cFileName);
+	sprintf(fname1,"%s",ffdata.cFileName);
+		if((ffdata.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
+			{
+					MessageBox(0,fname1,fname1,0);
+	
+			}
+	//	hf=FindFirstFileW(L"C:\\Users\\..",&ffdata);
+		FindNextFileW(hf,&ffdata);
+		wcscat(fname,ffdata.cFileName);
+	
+		if((ffdata.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
+			{
+					MessageBoxW(0,fname,fname,0);
+	
+			}
+		FindNextFileW(hf,&ffdata);
+		wcscat(fname,ffdata.cFileName);
+	
+		if((ffdata.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
+			{
+					MessageBoxW(0,fname,fname,0);
+	
+			}
+
+//	while(bSearch)
 	{
+
+
+		/*
+
 		if(FindNextFileW(hf,&ffdata))
 		{
 		wcscat(fname,ffdata.cFileName);
+		MessageBoxW(0,fname,fname,0);
 			if((ffdata.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
 			{
-				if(!find_file_in_dir(fname))
-				{
-				FindClose(hf);
-				return FALSE;
-				}
-			wcscpy(fname,srchpath);
+				
+	
 			}
-			else
-			{
-			wcscpy(fname,srchpath);
-			wprintf(fname);
-			}
+			
 		}
-		else
-		{
-			if(GetLastError() == ERROR_NO_MORE_FILES)
-			bSearch = false;
-			else
-			{
-			FindClose(hf);
-			return FALSE;
-			}
-		}
+		*/
 	}
 FindClose(hf);
 return 0;

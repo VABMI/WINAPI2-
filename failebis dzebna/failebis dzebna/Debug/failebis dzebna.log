@@ -1,0 +1,20 @@
+﻿  main.cpp
+f:\winapi2-\failebis dzebna\failebis dzebna\main.cpp(14): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(283) : see declaration of 'wcscpy'
+f:\winapi2-\failebis dzebna\failebis dzebna\main.cpp(15): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(276) : see declaration of 'wcscat'
+f:\winapi2-\failebis dzebna\failebis dzebna\main.cpp(16): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(283) : see declaration of 'wcscpy'
+f:\winapi2-\failebis dzebna\failebis dzebna\main.cpp(17): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(276) : see declaration of 'wcscat'
+f:\winapi2-\failebis dzebna\failebis dzebna\main.cpp(24): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(283) : see declaration of 'wcscpy'
+f:\winapi2-\failebis dzebna\failebis dzebna\main.cpp(30): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(276) : see declaration of 'wcscat'
+f:\winapi2-\failebis dzebna\failebis dzebna\main.cpp(32): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(276) : see declaration of 'wcscat'
+f:\winapi2-\failebis dzebna\failebis dzebna\main.cpp(45): warning C4996: 'wscanf': This function or variable may be unsafe. Consider using wscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(592) : see declaration of 'wscanf'
+f:\winapi2-\failebis dzebna\failebis dzebna\main.cpp(13): warning C4101: 'bufer' : unreferenced local variable
+  LINK : F:\WINAPI2-\failebis dzebna\Debug\failebis dzebna.exe not found or not built by the last incremental link; performing full link
+  failebis dzebna.vcxproj -> F:\WINAPI2-\failebis dzebna\Debug\failebis dzebna.exe
