@@ -1,0 +1,36 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: p17 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\chxai\AppData\Local\Temp\RSP8E43.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/p17.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\chxai\Documents\p21\p17.cpp"
+]
+Creating command line "cl.exe @C:\Users\chxai\AppData\Local\Temp\RSP8E43.tmp" 
+Creating temporary file "C:\Users\chxai\AppData\Local\Temp\RSP8E44.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/p17.pdb" /debug /machine:I386 /out:"Debug/p17.exe" /pdbtype:sept 
+.\Debug\p17.obj
+]
+Creating command line "link.exe @C:\Users\chxai\AppData\Local\Temp\RSP8E44.tmp"
+<h3>Output Window</h3>
+Compiling...
+p17.cpp
+c:\users\chxai\documents\p21\cmd_msg.cpp(8) : warning C4101: 'hfontPrev' : unreferenced local variable
+c:\users\chxai\documents\p21\cmd_msg.cpp(41) : error C2065: 'hfont_global' : undeclared identifier
+c:\users\chxai\documents\p21\cmd_msg.cpp(41) : error C2440: '=' : cannot convert from 'struct HFONT__ *' to 'int'
+        This conversion requires a reinterpret_cast, a C-style cast or function-style cast
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+p17.exe - 2 error(s), 1 warning(s)
+</pre>
+</body>
+</html>
