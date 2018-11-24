@@ -10,14 +10,6 @@ HFONT hfont_global;
 
 
 
-BOOL find_file_in_dir(wchar_r *path)
-{
-	HANDLE hf;
-	WIN32_FIND_DATA ffdata;
-	wchar_r srchpath[MAX_PATH];
-	
-}
-
 //----------------------------------------------------------------
 long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 					, unsigned int wparam,long lparam)

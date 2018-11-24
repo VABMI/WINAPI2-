@@ -1,3 +1,3 @@
 ﻿  main.cpp
-f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(84): warning C4715: 'WinMain' : not all control paths return a value
-  dzebna direqtoriebshi.vcxproj -> F:\WINAPI2-\dzebna direqtoriebshi\Debug\dzebna direqtoriebshi.exe
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(87): warning C4715: 'WinMain' : not all control paths return a value
+LINK : fatal error LNK1168: cannot open F:\WINAPI2-\dzebna direqtoriebshi\Debug\dzebna direqtoriebshi.exe for writing
