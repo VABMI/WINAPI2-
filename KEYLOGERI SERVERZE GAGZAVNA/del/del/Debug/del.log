@@ -1,8 +1,2 @@
-﻿  del.cpp
-f:\winapi2-\keylogeri serverze gagzavna\del\del\soketebi.cpp(36): warning C4101: 'ipin' : unreferenced local variable
-f:\winapi2-\keylogeri serverze gagzavna\del\del\del.cpp(98): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
-f:\winapi2-\keylogeri serverze gagzavna\del\del\del.cpp(157): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
-f:\winapi2-\keylogeri serverze gagzavna\del\del\del.cpp(155): warning C4101: 'buf' : unreferenced local variable
+﻿  LINK : F:\WINAPI2-\KEYLOGERI SERVERZE GAGZAVNA\del\Debug\del.exe not found or not built by the last incremental link; performing full link
   del.vcxproj -> F:\WINAPI2-\KEYLOGERI SERVERZE GAGZAVNA\del\Debug\del.exe

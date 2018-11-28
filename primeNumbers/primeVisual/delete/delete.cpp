@@ -8,15 +8,19 @@ HFONT hfont_global;
 
 //----------------------------------------------------------------
 
-DWORD WINAPI Thread_no_1( LPVOID bufer1 ) 
+DWORD WINAPI Thread_no_1( void* bufer1 ) 
 {
 	char*bufer=(char*)bufer1;
 	
+		MessageBox(0,(char*)bufer1,(char*)bufer1,0);
+				MessageBox(0,(char*)bufer,bufer,0);
 
 		        int length=strlen((char*)bufer);
 				char *number=(char*)malloc(length);//=bufer;
 				strcpy(number,(char*)bufer);
 			   int x=atoi(number);
+
+
 			   char buf2[1000];
 			   int i=3;
 
@@ -28,6 +32,7 @@ DWORD WINAPI Thread_no_1( LPVOID bufer1 )
 					
 							char buffer[20];
 							itoa(i,buffer,10);
+				
 
 							strcat(buf2,(char*)buffer);
 							strcat(buf2,"\n\r");
