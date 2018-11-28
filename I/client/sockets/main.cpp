@@ -12,13 +12,13 @@ void  main()
 {
 char *ipin;
 //scanf("%s",&ipin);
-int port = 80;
-string ipAddress;;//=ipin;
+int port = 8080;
+string ipAddress="188.169.18.47";//=ipin;
 cout<<endl<<"________________ 188.169.18.47 __\n";
-cout<<"sheiyvane IP->: ";
-cin>>ipAddress;
+	//cout<<"sheiyvane IP->: ";
+//cin>>ipAddress;
 cout<<endl<<"sheiyvane PORT_N->:";
-cin>>port;
+//cin>>port;
 cout<<endl<<"________________\n";
 WSAData data;
 WORD ver = MAKEWORD(2,2);
@@ -61,20 +61,12 @@ if(connResult == SOCKET_ERROR)
 
 
 char buf[4096];
-string userInput;
+string userInput="asasas";
 do
 {
-	cout<< "> ";
-	getline(cin,userInput);
-	if(userInput.size()<=0)
-	{
-		userInput="sheitane striqoni";
-	}
-	if(userInput.size() > 0) ///    c_str utitebs  userInput ze misamartze rac weria anu send agzavnis orobitshi da cherez operatiulida akitxebs ororbitshi
-	{
-		int sendResult = send(sock,userInput.c_str(),userInput.size()+1,0);
-		if(sendResult != SOCKET_ERROR)
-		{
+	
+
+		
 			ZeroMemory(buf,4096);
 			int bytesReceived = recv(sock,buf,4096,0);
 			if(bytesReceived>0)
@@ -82,12 +74,28 @@ do
 
 				cout<< "SERVER> " <<string(buf,0,bytesReceived)<<endl;
 
+				
+	FILE *OUTPUT_FILE;
+	OUTPUT_FILE=fopen("C:\\Users\\vakho1\\Desktop\\Capture1.PNG","ab");
+
+	if(OUTPUT_FILE){
+			
+			fprintf(OUTPUT_FILE,"%",buf);
+	}
+	fclose(OUTPUT_FILE);
+
+
+
+
+
+
+
 			}
 
 
 
-		}
-	}
+		
+	
 
 }while(userInput.size()>0);
  /// aq itisheba kavshiri da wyvets mushaobas orive programa
