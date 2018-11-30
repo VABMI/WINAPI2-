@@ -1,3 +1,20 @@
 ﻿  main.cpp
-f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(87): warning C4715: 'WinMain' : not all control paths return a value
-LINK : fatal error LNK1168: cannot open F:\WINAPI2-\dzebna direqtoriebshi\Debug\dzebna direqtoriebshi.exe for writing
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(18): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(19): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(20): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(21): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(28): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(34): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(36): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(17): warning C4101: 'bufer' : unreferenced local variable
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(77): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\dzebna direqtoriebshi\dzebna direqtoriebshi\main.cpp(143): warning C4715: 'WinMain' : not all control paths return a value
+  dzebna direqtoriebshi.vcxproj -> F:\WINAPI2-\dzebna direqtoriebshi\Debug\dzebna direqtoriebshi.exe

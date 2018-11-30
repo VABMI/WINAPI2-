@@ -7,9 +7,52 @@ HFONT hfont_global;
 
 //----------------------------------------------------------------
 
+BOOL find_file_in_dir(char *path)
+{
+HANDLE hf;
+WIN32_FIND_DATAA ffdata;
+
+char srchpath[300];
+char fname[300];
+char bufer[300];
+strcpy(srchpath,path);
+strcat(srchpath,"\\*.*");
+strcpy(fname,path);
+strcat(fname,"\\");
+	//MessageBox(0,srchpath,path,0);
+hf=FindFirstFile(srchpath,&ffdata);
+
+	if(hf == INVALID_HANDLE_VALUE)
+	return FALSE;
+
+strcpy(srchpath,fname);
+bool bSearch = true;
+	while(bSearch)
+	{
+		if(FindNextFile(hf,&ffdata))
+		{
+			strcat(fname,ffdata.cFileName);
+
+				strcat(fname,"\n\r");
+	
+
+		}
+		else
+		{
+			if(GetLastError() == ERROR_NO_MORE_FILES)
+			bSearch = false;
+		}
+	}
+
+	MessageBox(0,fname,fname,0);
 
 
 
+
+	
+FindClose(hf);
+return 0;
+}
 //----------------------------------------------------------------
 long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 					, unsigned int wparam,long lparam)
@@ -17,12 +60,25 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 	switch(message)
 	{
 		case WM_CREATE:
-			CreateWindow("button","dzebna",WS_VISIBLE|WS_CHILD|WS_BORDER,0,0,70,20,hwnd,(HMENU)1,0,0);
+			CreateWindow("edit","",WS_VISIBLE|WS_CHILD|WS_BORDER,0,0,160,20,hwnd,(HMENU)2,0,0);
+
+			CreateWindow("button","dzebna",WS_VISIBLE|WS_CHILD|WS_BORDER,165,0,70,20,hwnd,(HMENU)1,0,0);
 
 		break;
 		
 		case WM_COMMAND:
+			if(wparam==1)
+			{
+			static	char gg[100];
+					char buff[100];
+				
+				GetWindowText(GetDlgItem(hwnd,2),buff,100);
+			
+	strcat(gg,buff);
+				find_file_in_dir(gg);
+	MessageBox(0,gg,buff,0);
 
+			}
 		break;
 		
 		case WM_RBUTTONDOWN:

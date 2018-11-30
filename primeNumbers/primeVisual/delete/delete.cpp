@@ -2,33 +2,19 @@
 #include "stdafx.h"
 HFONT hfont_global;
 HWND globh;
-		  static char buf2[1000000];
-
+		
+bool b1=0;
 //----------------------------------------------------------------
 
 DWORD WINAPI Thread_no_1( void** bufer1 ) 
 {
 	
 			   int x=(int)bufer1[0];
-
-
-	
-			
-			  /*
-				for(int i=3;i<=(int)bufer1[0];i+=2)
-					{
-						if(i%3!=0)
-						{
-							char buffer[20];
-							itoa(i,buffer,10);
-							strcat(buf2,(char*)buffer);
-							strcat(buf2,"\n\r");
-						}
-					}
-					*/
-
+			     static char buf2[999999999];
+				
+				
 			  
-					  for(int i=2;i<=(int)bufer1[0];i++)
+					  for(int i=(int)bufer1[0];i<=(int)bufer1[1];i++)
 						{
 							for(int j=2;j<i;j++)
 							{
@@ -44,7 +30,7 @@ DWORD WINAPI Thread_no_1( void** bufer1 )
 									//strcat(buf2,"\n\r");
 									strcat(buf2,"|_| ");
 							
-								
+									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
 								}
 							}
 						}
@@ -53,10 +39,11 @@ DWORD WINAPI Thread_no_1( void** bufer1 )
 					
 
 
-
-					//	MessageBox(0,buf2,buf2,MB_TOPMOST);	
+					  b1=1;
+					//	MessageBox(0,"morcha","morcha",MB_TOPMOST);	
 						
 						
+					
 
 	return 1; 
 } 
@@ -66,28 +53,11 @@ DWORD WINAPI Thread_no_2( void** bufer1 )
 			   int x=atoi((char*)bufer1);
 
 
-			  static char buf2[1000];
-			
-			  /*
-				for(int i=(int)bufer1[0];i<=(int)bufer1[1];i+=2)
-					{
-
-						for(int h=1;h<=10;h++)
-						{
-								if(i%h>)
-								{
-									char buffer[20];
-									itoa(i,buffer,10);
-									strcat(buf2,(char*)buffer);
-									strcat(buf2,"\n\r");
-								}
-						}
-					}
-					*/
+			  static char buf2[100000];
 
 
 
-					  for(int i=(int)bufer1[0];i<=(int)bufer1[1];i++)
+					  for(int i=(int)bufer1[1];i<=(int)bufer1[2];i++)
 						{
 							for(int j=2;j<i;j++)
 							{
@@ -95,34 +65,222 @@ DWORD WINAPI Thread_no_2( void** bufer1 )
 									break;
 									else if(i==j+1)
 								{
-									char buffer[20];
-									itoa(i,buffer,10);
+									char buffer[2000];
+									sprintf(buffer,"%i",i);
+									//	itoa(i,buffer,10);
 									strcat(buf2,(char*)buffer);
-									strcat(buf2,"\n\r");
+									strcat(buf2,"|_| ");
 								}
 						}
 					  }
-						MessageBox(0,buf2,buf2,0);
+
+
+
+					  L:
+
+					  if(b1==1){
+
+					  SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
+					  }
+
+					  else{ goto L;}
+					//	MessageBox(0,buf2,buf2,0);
+
+					
 	return 1; 
 } 
+DWORD WINAPI Thread_no_3( void** bufer1 ) 
+{
+	
+			   int x=(int)bufer1[0];
+			     static char buf2[999999999];
+				
+				
+			  
+					  for(int i=(int)bufer1[2];i<=(int)bufer1[3];i++)
+						{
+							for(int j=2;j<i;j++)
+							{
+								if(i%j==0)
+									break;
+								else if(i==j+1)
+								{
+									char buffer[2000];
+
+									sprintf(buffer,"%i",i);
+								//	itoa(i,buffer,90);
+									strcat(buf2,(char*)buffer);
+									//strcat(buf2,"\n\r");
+									strcat(buf2,"|_| ");
+							
+									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
+								}
+							}
+						}
+
+				
+					
 
 
+					  b1=1;
+					//	MessageBox(0,"morcha","morcha",MB_TOPMOST);	
+						
+						
+					
+
+	return 1; 
+} 
+DWORD WINAPI Thread_no_4( void** bufer1 ) 
+{
+	
+			   int x=(int)bufer1[0];
+			     static char buf2[999999999];
+				
+				
+			  
+					  for(int i=(int)bufer1[3];i<=(int)bufer1[4];i++)
+						{
+							for(int j=2;j<i;j++)
+							{
+								if(i%j==0)
+									break;
+								else if(i==j+1)
+								{
+									char buffer[2000];
+
+									sprintf(buffer,"%i",i);
+								//	itoa(i,buffer,90);
+									strcat(buf2,(char*)buffer);
+									//strcat(buf2,"\n\r");
+									strcat(buf2,"|_| ");
+							
+									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
+								}
+							}
+						}
+
+				
+					
+
+
+					  b1=1;
+					//	MessageBox(0,"morcha","morcha",MB_TOPMOST);	
+						
+						
+					
+
+	return 1; 
+} 
+DWORD WINAPI Thread_no_5( void** bufer1 ) 
+{
+	
+			   int x=(int)bufer1[0];
+			     static char buf2[999999999];
+				
+				
+			  
+					  for(int i=(int)bufer1[4];i<=(int)bufer1[5];i++)
+						{
+							for(int j=2;j<i;j++)
+							{
+								if(i%j==0)
+									break;
+								else if(i==j+1)
+								{
+									char buffer[2000];
+
+									sprintf(buffer,"%i",i);
+								//	itoa(i,buffer,90);
+									strcat(buf2,(char*)buffer);
+									//strcat(buf2,"\n\r");
+									strcat(buf2,"|_| ");
+							
+									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
+								}
+							}
+						}
+
+				
+					
+
+
+					  b1=1;
+					//	MessageBox(0,"morcha","morcha",MB_TOPMOST);	
+						
+						
+					
+
+	return 1; 
+} 
+DWORD WINAPI Thread_no_6( void** bufer1 ) 
+{
+	
+			   int x=(int)bufer1[0];
+			     static char buf2[999999999];
+				
+				
+			  
+					  for(int i=(int)bufer1[5];i<=(int)bufer1[6];i++)
+						{
+							for(int j=2;j<i;j++)
+							{
+								if(i%j==0)
+									break;
+								else if(i==j+1)
+								{
+									char buffer[2000];
+
+									sprintf(buffer,"%i",i);
+								//	itoa(i,buffer,90);
+									strcat(buf2,(char*)buffer);
+									//strcat(buf2,"\n\r");
+									strcat(buf2,"|_| ");
+							
+									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
+								}
+							}
+						}
+
+				
+					
+
+
+					  b1=1;
+					//	MessageBox(0,"morcha","morcha",MB_TOPMOST);	
+						
+						
+					
+
+	return 1; 
+} 
 //----------------------------------------------------------------
 long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 					, unsigned int wparam,long lparam)
-{
+{				
+	
+	
+	
+	
+
+
+
+
+
 	switch(message)
 	{
 		case WM_CREATE:
-			{
-
+			{ 
+				
 				globh=hwnd;
 				RECT r;
 				CreateWindow("edit","Main",WS_CHILD|WS_BORDER|WS_VISIBLE,0,0,150,30,hwnd,(HMENU)1,0,0);
 
 				CreateWindow("Button","gashveba",WS_CHILD|WS_BORDER|WS_VISIBLE,155,0,80,30,hwnd,(HMENU)2,0,0);
 				GetClientRect(hwnd,&r);
-			globh=CreateWindow("edit","",WS_CHILD|WS_BORDER|WS_VISIBLE|WS_VSCROLL|WS_HSCROLL|ES_MULTILINE,0,50,r.right,r.bottom-55,hwnd,(HMENU)3,0,0);
+				globh=CreateWindow("edit","",WS_CHILD|WS_BORDER|WS_VISIBLE|WS_VSCROLL|WS_HSCROLL|ES_MULTILINE,0,50,r.right,r.bottom-55,hwnd,(HMENU)3,0,0);
+				SendMessage(globh,EM_SETLIMITTEXT,1000000,0);
+
+
 
 			}
 		break;
@@ -132,9 +290,9 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 
 				if(wparam==2)
 				{	
+					int dd=2;
 					
-					
-					
+					SendMessage(globh,WM_SETTEXT,0,(LPARAM)"");
 					
 					
 					static int arr[100];
@@ -142,23 +300,43 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 					SendMessage(GetDlgItem(hwnd,1),WM_GETTEXT,100,(LPARAM)bufer);
 					//MessageBox(0,bufer,bufer,0);
 					int value=atoi(bufer);
-					arr[0]=(value/2);
-					arr[1]=value;
-					arr[2]=(int)hwnd;
-			//		int val1=(value/2);
+					
+					arr[0]=2;
+					arr[1]=(value/dd);
+					arr[2]=(arr[1]+(value/dd));
+					arr[3]=(arr[2]+(value/dd));
+					arr[4]=(arr[3]+(value/dd));
+					arr[5]=(arr[4]+(value/dd));
+				//	arr[1]=value;
+				//	arr[2]=(int)hwnd;
+				//	int val1=(value/2);
+				
 
-					HANDLE Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,&arr,0,0);
+						HANDLE Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,&arr,0,0);
+						/*
+						Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_2,&arr,0,0);
 
-					WaitForSingleObject(Thread1,INFINITE);
-						SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
+						Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_3,&arr,0,0);
 
-				//	HANDLE Thread2=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_2,&arr,0,0);
+						Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_4,&arr,0,0);
+				
+						Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_5,&arr,0,0);
+
+						*/
+
+
+
+					
+					//	WaitForSingleObject(Thread1,INFINITE);
+					//	SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
+
+					//	HANDLE Thread2=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_2,&arr,0,0);
 				
 
 				//	system("pause");
-				MessageBox(0,"gacdaaaa",bufer,0);
+			//	MessageBox(0,"gacdaaaa",bufer,0);
 
-					system("pause");
+			
 				}
 
 			
