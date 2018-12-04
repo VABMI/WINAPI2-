@@ -28,7 +28,7 @@ DWORD WINAPI SEND(void* sock,string userInput)
 
 
 
-void * CreateSoket()
+void * CreateSoket(unsigned __int64  *soket1)
 {
 
 		
@@ -63,18 +63,21 @@ hint.sin_family = AF_INET;
 hint.sin_port = htons(port);
 inet_pton(AF_INET,ipAddress.c_str(),&hint.sin_addr); /// ver gavigee
 
-
+L:
 int connResult = connect(sock,(sockaddr*)&hint,sizeof(hint));
 
 if(connResult == SOCKET_ERROR)
 {
 
+	goto L;
+	/*
 	cerr <<"Can't connect to server ,err111 "<<WSAGetLastError()<<endl;
 	closesocket(sock);
 	WSACleanup();
 	return 0;
-
+	*/
 }
+*soket1=sock;
 return (void*)sock;
 
 }

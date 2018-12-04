@@ -7,14 +7,16 @@ bool b1=0;
 //----------------------------------------------------------------
 
 DWORD WINAPI Thread_no_1( void** bufer1 ) 
-{
+{		
+			   int x3=(int )bufer1[2];
+
+			   int x=(int )bufer1[0];
+			   int x2=(int )bufer1[1];
+			
+			static   char buf2[999];
 	
-			   int x=(int)bufer1[0];
-			     static char buf2[999999999];
-				
-				
 			  
-					  for(int i=(int)bufer1[0];i<=(int)bufer1[1];i++)
+					  for(int i=x;i<=x2;i++)
 						{
 							for(int j=2;j<i;j++)
 							{
@@ -25,18 +27,19 @@ DWORD WINAPI Thread_no_1( void** bufer1 )
 									char buffer[2000];
 
 									sprintf(buffer,"%i",i);
-								//	itoa(i,buffer,90);
-									strcat(buf2,(char*)buffer);
-									//strcat(buf2,"\n\r");
-									strcat(buf2,"|_| ");
+									//	itoa(i,buffer,90);
+										strcat_s(buf2,"|");
+									strcat_s(buf2,buffer);
+									strcat_s(buf2,"|\r\n");
+									//strcat_s(buf2,"|_| ");
 							
-									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
+								
 								}
 							}
 						}
 
-				
-					
+				Sleep(x3);
+						SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
 
 
 					  b1=1;
@@ -47,57 +50,64 @@ DWORD WINAPI Thread_no_1( void** bufer1 )
 
 	return 1; 
 } 
-DWORD WINAPI Thread_no_2( void** bufer1 ) 
-{
-	
-			   int x=atoi((char*)bufer1);
 
 
-			  static char buf2[100000];
+DWORD WINAPI Thread_no_2( void** bufer2 ) 
+{		
+			   int x3=(int )bufer2[2];
 
-
-
-					  for(int i=(int)bufer1[1];i<=(int)bufer1[2];i++)
+			   int x=(int )bufer2[0];
+			   int x2=(int )bufer2[1];
+			
+			static   char buf3[999];
+		
+			  
+					  for(int i=x;i<=x2;i++)
 						{
 							for(int j=2;j<i;j++)
 							{
 								if(i%j==0)
 									break;
-									else if(i==j+1)
+								else if(i==j+1)
 								{
 									char buffer[2000];
+
 									sprintf(buffer,"%i",i);
-									//	itoa(i,buffer,10);
-									strcat(buf2,(char*)buffer);
-									strcat(buf2,"|_| ");
+									//	itoa(i,buffer,90);
+										strcat_s(buf3,"|");
+									strcat_s(buf3,buffer);
+									strcat_s(buf3,"|\r\n");
+									//strcat_s(buf2,"|_| ");
+							
+								
 								}
+							}
 						}
-					  }
+
+				Sleep(x3);
+						SendMessage(globh,EM_REPLACESEL,strlen(buf3),(LPARAM)buf3);
 
 
-
-					  L:
-
-					  if(b1==1){
-
-					  SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
-					  }
-
-					  else{ goto L;}
-					//	MessageBox(0,buf2,buf2,0);
-
+					  b1=1;
+					//	MessageBox(0,"morcha","morcha",MB_TOPMOST);	
+						
+						
 					
+
 	return 1; 
 } 
+
 DWORD WINAPI Thread_no_3( void** bufer1 ) 
-{
+{		
+			   int x3=(int )bufer1[2];
+
+			   int x=(int )bufer1[0];
+			   int x2=(int )bufer1[1];
+			
+			static   char buf2[999];
 	
-			   int x=(int)bufer1[0];
-			     static char buf2[999999999];
-				
-				
 			  
-					  for(int i=(int)bufer1[2];i<=(int)bufer1[3];i++)
+					  for(int i=x;i<=x2;i++)
 						{
 							for(int j=2;j<i;j++)
 							{
@@ -108,18 +118,19 @@ DWORD WINAPI Thread_no_3( void** bufer1 )
 									char buffer[2000];
 
 									sprintf(buffer,"%i",i);
-								//	itoa(i,buffer,90);
-									strcat(buf2,(char*)buffer);
-									//strcat(buf2,"\n\r");
-									strcat(buf2,"|_| ");
+									//	itoa(i,buffer,90);
+										strcat(buf2,"|");
+									strcat_s(buf2,buffer);
+									strcat(buf2,"|\r\n");
+									//strcat_s(buf2,"|_| ");
 							
-									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
+								
 								}
 							}
 						}
 
-				
-					
+				Sleep(x3);
+						SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
 
 
 					  b1=1;
@@ -130,130 +141,7 @@ DWORD WINAPI Thread_no_3( void** bufer1 )
 
 	return 1; 
 } 
-DWORD WINAPI Thread_no_4( void** bufer1 ) 
-{
-	
-			   int x=(int)bufer1[0];
-			     static char buf2[999999999];
-				
-				
-			  
-					  for(int i=(int)bufer1[3];i<=(int)bufer1[4];i++)
-						{
-							for(int j=2;j<i;j++)
-							{
-								if(i%j==0)
-									break;
-								else if(i==j+1)
-								{
-									char buffer[2000];
 
-									sprintf(buffer,"%i",i);
-								//	itoa(i,buffer,90);
-									strcat(buf2,(char*)buffer);
-									//strcat(buf2,"\n\r");
-									strcat(buf2,"|_| ");
-							
-									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
-								}
-							}
-						}
-
-				
-					
-
-
-					  b1=1;
-					//	MessageBox(0,"morcha","morcha",MB_TOPMOST);	
-						
-						
-					
-
-	return 1; 
-} 
-DWORD WINAPI Thread_no_5( void** bufer1 ) 
-{
-	
-			   int x=(int)bufer1[0];
-			     static char buf2[999999999];
-				
-				
-			  
-					  for(int i=(int)bufer1[4];i<=(int)bufer1[5];i++)
-						{
-							for(int j=2;j<i;j++)
-							{
-								if(i%j==0)
-									break;
-								else if(i==j+1)
-								{
-									char buffer[2000];
-
-									sprintf(buffer,"%i",i);
-								//	itoa(i,buffer,90);
-									strcat(buf2,(char*)buffer);
-									//strcat(buf2,"\n\r");
-									strcat(buf2,"|_| ");
-							
-									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
-								}
-							}
-						}
-
-				
-					
-
-
-					  b1=1;
-					//	MessageBox(0,"morcha","morcha",MB_TOPMOST);	
-						
-						
-					
-
-	return 1; 
-} 
-DWORD WINAPI Thread_no_6( void** bufer1 ) 
-{
-	
-			   int x=(int)bufer1[0];
-			     static char buf2[999999999];
-				
-				
-			  
-					  for(int i=(int)bufer1[5];i<=(int)bufer1[6];i++)
-						{
-							for(int j=2;j<i;j++)
-							{
-								if(i%j==0)
-									break;
-								else if(i==j+1)
-								{
-									char buffer[2000];
-
-									sprintf(buffer,"%i",i);
-								//	itoa(i,buffer,90);
-									strcat(buf2,(char*)buffer);
-									//strcat(buf2,"\n\r");
-									strcat(buf2,"|_| ");
-							
-									SendMessage(globh,EM_REPLACESEL,strlen(buf2),(LPARAM)buf2);
-								}
-							}
-						}
-
-				
-					
-
-
-					  b1=1;
-					//	MessageBox(0,"morcha","morcha",MB_TOPMOST);	
-						
-						
-					
-
-	return 1; 
-} 
-//----------------------------------------------------------------
 long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 					, unsigned int wparam,long lparam)
 {				
@@ -290,6 +178,16 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 
 				if(wparam==2)
 				{	
+				
+
+
+
+//					MessageBox(0,(LPCSTR)fff[3],fff[1],0);
+					
+					
+					
+					
+					
 					int dd=2;
 					
 					SendMessage(globh,WM_SETTEXT,0,(LPARAM)"");
@@ -301,29 +199,26 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 					//MessageBox(0,bufer,bufer,0);
 					int value=atoi(bufer);
 					
-					arr[0]=2;
-					arr[1]=(value/dd);
-					arr[2]=(arr[1]+(value/dd));
-					arr[3]=(arr[2]+(value/dd));
-					arr[4]=(arr[3]+(value/dd));
-					arr[5]=(arr[4]+(value/dd));
-				//	arr[1]=value;
-				//	arr[2]=(int)hwnd;
-				//	int val1=(value/2);
-				
-
+							arr[0]=0;
+							arr[1]=(value/3);
+							arr[2]=0;
+					
 						HANDLE Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,&arr,0,0);
-						/*
-						Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_2,&arr,0,0);
+						   	Sleep(2000);
+					//	arr[2]=1000;
+							arr[0]+=(value/3);
+							arr[1]+=(value/3);
+							
+						CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,&arr,0,0);
+						 	Sleep(4000);
+							arr[0]+=(value/3);
+							arr[1]+=(value/3);
+						//	arr[2]=1000;
 
-						Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_3,&arr,0,0);
-
-						Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_4,&arr,0,0);
+							  
+						CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,&arr,0,0);
+						
 				
-						Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_5,&arr,0,0);
-
-						*/
-
 
 
 					

