@@ -1,0 +1,234 @@
+﻿Build started 15.11.2018 20:52:52.
+     1>Project "F:\WINAPI1-\DESKTOP\messigebis desktopze gamotana\p21.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating ".\Debug\p21.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         D:\New Folder\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Debug\\" /Fd".\Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt p21.cpp
+         p21.cpp
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(91): warning C4005: 'AF_IPX' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(460) : see previous definition of 'AF_IPX'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(131): warning C4005: 'AF_MAX' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(479) : see previous definition of 'AF_MAX'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(168): warning C4005: 'SO_DONTLINGER' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(402) : see previous definition of 'SO_DONTLINGER'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(212): error C2011: 'sockaddr' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(485) : see declaration of 'sockaddr'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(390): error C2059: syntax error : 'constant'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(390): error C3805: 'constant': unexpected token, expected either '}' or a ','
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(524): warning C4005: 'IN_CLASSA' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(287) : see previous definition of 'IN_CLASSA'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(530): warning C4005: 'IN_CLASSB' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(293) : see previous definition of 'IN_CLASSB'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(536): warning C4005: 'IN_CLASSC' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(299) : see previous definition of 'IN_CLASSC'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(547): warning C4005: 'INADDR_ANY' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(304) : see previous definition of 'INADDR_ANY'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(549): warning C4005: 'INADDR_BROADCAST' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(306) : see previous definition of 'INADDR_BROADCAST'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2def.h(583): error C2011: 'sockaddr_in' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(312) : see declaration of 'sockaddr_in'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(132): error C2011: 'fd_set' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(68) : see declaration of 'fd_set'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(167): warning C4005: 'FD_SET' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(102) : see previous definition of 'FD_SET'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(176): error C2011: 'timeval' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(111) : see declaration of 'timeval'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(232): error C2011: 'hostent' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(167) : see declaration of 'hostent'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(245): error C2011: 'netent' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(180) : see declaration of 'netent'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(252): error C2011: 'servent' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(187) : see declaration of 'servent'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(264): error C2011: 'protoent' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(199) : see declaration of 'protoent'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(360): error C2011: 'WSAData' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(322) : see declaration of 'WSAData'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(458): error C2011: 'sockproto' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(494) : see declaration of 'sockproto'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(500): error C2011: 'linger' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(531) : see declaration of 'linger'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(513): warning C4005: 'SOMAXCONN' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(544) : see previous definition of 'SOMAXCONN'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(542): warning C4005: 'FD_READ' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(562) : see previous definition of 'FD_READ'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(545): warning C4005: 'FD_WRITE' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(563) : see previous definition of 'FD_WRITE'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(548): warning C4005: 'FD_OOB' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(564) : see previous definition of 'FD_OOB'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(551): warning C4005: 'FD_ACCEPT' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(565) : see previous definition of 'FD_ACCEPT'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(554): warning C4005: 'FD_CONNECT' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(566) : see previous definition of 'FD_CONNECT'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(557): warning C4005: 'FD_CLOSE' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(567) : see previous definition of 'FD_CLOSE'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1578): error C2375: 'accept' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(742) : see declaration of 'accept'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1600): error C2375: 'bind' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(747) : see declaration of 'bind'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1619): error C2375: 'closesocket' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(752) : see declaration of 'closesocket'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1638): error C2375: 'connect' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(754) : see declaration of 'connect'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1659): error C2375: 'ioctlsocket' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(759) : see declaration of 'ioctlsocket'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1680): error C2375: 'getpeername' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(764) : see declaration of 'getpeername'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1701): error C2375: 'getsockname' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(769) : see declaration of 'getsockname'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1724): error C2375: 'getsockopt' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(774) : see declaration of 'getsockopt'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1745): error C2375: 'htonl' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(781) : see declaration of 'htonl'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1762): error C2375: 'htons' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(783) : see declaration of 'htons'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1780): error C2375: 'inet_addr' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(785) : see declaration of 'inet_addr'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1797): error C2375: 'inet_ntoa' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(787) : see declaration of 'inet_ntoa'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1815): error C2375: 'listen' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(789) : see declaration of 'listen'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1833): error C2375: 'ntohl' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(793) : see declaration of 'ntohl'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1850): error C2375: 'ntohs' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(795) : see declaration of 'ntohs'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1870): error C2375: 'recv' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(797) : see declaration of 'recv'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1895): error C2375: 'recvfrom' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(803) : see declaration of 'recvfrom'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1921): error C2375: 'select' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(811) : see declaration of 'select'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1945): error C2375: 'send' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(818) : see declaration of 'send'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1970): error C2375: 'sendto' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(824) : see declaration of 'sendto'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(1996): error C2375: 'setsockopt' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(832) : see declaration of 'setsockopt'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2018): error C2375: 'shutdown' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(839) : see declaration of 'shutdown'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2039): error C2375: 'socket' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(843) : see declaration of 'socket'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2063): error C2375: 'gethostbyaddr' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(850) : see declaration of 'gethostbyaddr'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2083): error C2375: 'gethostbyname' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(855) : see declaration of 'gethostbyname'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2101): error C2375: 'gethostname' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(857) : see declaration of 'gethostname'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2121): error C2375: 'getservbyport' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(861) : see declaration of 'getservbyport'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2141): error C2375: 'getservbyname' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(865) : see declaration of 'getservbyname'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2160): error C2375: 'getprotobynumber' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(869) : see declaration of 'getprotobynumber'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2178): error C2375: 'getprotobyname' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(871) : see declaration of 'getprotobyname'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2200): error C2375: 'WSAStartup' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(875) : see declaration of 'WSAStartup'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2219): error C2375: 'WSACleanup' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(879) : see declaration of 'WSACleanup'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2236): error C2375: 'WSASetLastError' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(881) : see declaration of 'WSASetLastError'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2253): error C2375: 'WSAGetLastError' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(883) : see declaration of 'WSAGetLastError'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2270): error C2375: 'WSAIsBlocking' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(885) : see declaration of 'WSAIsBlocking'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2287): error C2375: 'WSAUnhookBlockingHook' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(887) : see declaration of 'WSAUnhookBlockingHook'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2304): error C2375: 'WSASetBlockingHook' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(889) : see declaration of 'WSASetBlockingHook'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2321): error C2375: 'WSACancelBlockingCall' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(891) : see declaration of 'WSACancelBlockingCall'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2343): error C2375: 'WSAAsyncGetServByName' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(893) : see declaration of 'WSAAsyncGetServByName'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2370): error C2375: 'WSAAsyncGetServByPort' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(901) : see declaration of 'WSAAsyncGetServByPort'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2396): error C2375: 'WSAAsyncGetProtoByName' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(909) : see declaration of 'WSAAsyncGetProtoByName'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2421): error C2375: 'WSAAsyncGetProtoByNumber' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(916) : see declaration of 'WSAAsyncGetProtoByNumber'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2446): error C2375: 'WSAAsyncGetHostByName' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(923) : see declaration of 'WSAAsyncGetHostByName'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2473): error C2375: 'WSAAsyncGetHostByAddr' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(930) : see declaration of 'WSAAsyncGetHostByAddr'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2496): error C2375: 'WSACancelAsyncRequest' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(939) : see declaration of 'WSACancelAsyncRequest'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock2.h(2517): error C2375: 'WSAAsyncSelect' : redefinition; different linkage
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(941) : see declaration of 'WSAAsyncSelect'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(75): error C2079: 'sockaddr_gen::Address' uses undefined struct 'sockaddr'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(76): error C2079: 'sockaddr_gen::AddressIn' uses undefined struct 'sockaddr_in'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(119): warning C4005: 'IP_TOS' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(352) : see previous definition of 'IP_TOS'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(120): warning C4005: 'IP_TTL' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(351) : see previous definition of 'IP_TTL'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(121): warning C4005: 'IP_MULTICAST_IF' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(346) : see previous definition of 'IP_MULTICAST_IF'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(122): warning C4005: 'IP_MULTICAST_TTL' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(347) : see previous definition of 'IP_MULTICAST_TTL'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(123): warning C4005: 'IP_MULTICAST_LOOP' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(348) : see previous definition of 'IP_MULTICAST_LOOP'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(124): warning C4005: 'IP_ADD_MEMBERSHIP' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(349) : see previous definition of 'IP_ADD_MEMBERSHIP'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(125): warning C4005: 'IP_DROP_MEMBERSHIP' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(350) : see previous definition of 'IP_DROP_MEMBERSHIP'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(126): warning C4005: 'IP_DONTFRAGMENT' : macro redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(353) : see previous definition of 'IP_DONTFRAGMENT'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(193): error C2079: '_SOCKADDR_INET::Ipv4' uses undefined struct 'sockaddr_in'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2ipdef.h(700): error C2011: 'ip_mreq' : 'struct' type redefinition
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(363) : see declaration of 'ip_mreq'
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2tcpip.h(664): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2tcpip.h(671): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2tcpip.h(709): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2tcpip.h(716): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2tcpip.h(760): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2tcpip.h(767): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2tcpip.h(807): error C3861: 'WSASetLastError': identifier not found
+     1>c:\program files (x86)\microsoft sdks\windows\v7.0a\include\ws2tcpip.h(814): error C3861: 'WSASetLastError': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(57): error C2079: 'data' uses undefined struct 'WSAData'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(59): error C3861: 'WSAStartup': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(59): error C2440: 'initializing' : cannot convert from 'int (__stdcall *)(WORD,LPWSADATA)' to 'int'
+                 There is no context in which this conversion is possible
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(64): error C2561: 'on_create' : function must return a value
+                 f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(31) : see declaration of 'on_create'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(68): error C3861: 'socket': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(68): error C2440: 'initializing' : cannot convert from 'SOCKET (__stdcall *)(int,int,int)' to 'SOCKET'
+                 There is no context in which this conversion is possible
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(73): error C2568: '<<' : unable to resolve function overload
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(883): could be 'int WSAGetLastError(void)'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(73): error C3861: 'WSAGetLastError': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(74): error C3861: 'WSACleanup': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(75): error C2561: 'on_create' : function must return a value
+                 f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(31) : see declaration of 'on_create'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(78): error C2079: 'hint' uses undefined struct 'sockaddr_in'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(79): error C2228: left of '.sin_family' must have class/struct/union
+                 type is 'int'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(80): error C2228: left of '.sin_port' must have class/struct/union
+                 type is 'int'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(80): error C3861: 'htons': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(81): error C2228: left of '.sin_addr' must have class/struct/union
+                 type is 'int'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(84): error C3861: 'connect': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(84): error C2440: 'initializing' : cannot convert from 'int (__stdcall *)(SOCKET,const sockaddr *,int)' to 'int'
+                 There is no context in which this conversion is possible
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(89): error C2568: '<<' : unable to resolve function overload
+                 c:\program files (x86)\microsoft sdks\windows\v7.0a\include\winsock.h(883): could be 'int WSAGetLastError(void)'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(89): error C3861: 'WSAGetLastError': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(90): error C3861: 'closesocket': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(91): error C3861: 'WSACleanup': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(92): error C2561: 'on_create' : function must return a value
+                 f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(31) : see declaration of 'on_create'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(110): error C3861: 'send': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(110): error C2440: 'initializing' : cannot convert from 'int (__stdcall *)(SOCKET,const char *,int,int)' to 'int'
+                 There is no context in which this conversion is possible
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(114): error C3861: 'recv': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(114): error C2440: 'initializing' : cannot convert from 'int (__stdcall *)(SOCKET,char *,int,int)' to 'int'
+                 There is no context in which this conversion is possible
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(125): error C2440: '=' : cannot convert from 'int (__stdcall *)(SOCKET,const char *,int,int)' to 'int'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(125): error C2440: '=' : cannot convert from 'int (__stdcall *)(SOCKET,const char *,int,int)' to 'int'
+                 There is no context in which this conversion is possible
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(125): error C3861: 'send': identifier not found
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(133): error C2440: '=' : cannot convert from 'int (__stdcall *)(SOCKET,const char *,int,int)' to 'int'
+     1>f:\winapi1-\desktop\messigebis desktopze gamotana\on_create.cpp(133): fatal error C1003: error count exceeds 100; stopping compilation
+     1>Done Building Project "F:\WINAPI1-\DESKTOP\messigebis desktopze gamotana\p21.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.24

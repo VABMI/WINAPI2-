@@ -1,0 +1,21 @@
+﻿  main.cpp
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\sokets.cpp(5): warning C4101: 'ipin' : unreferenced local variable
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(13): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(11): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(15): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(23): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(29): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(31): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(50): warning C4172: returning address of local variable or temporary
+f:\winapi1-\desktop\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(9): warning C4101: 'bufer' : unreferenced local variable
+  LINK : F:\WINAPI1-\DESKTOP\messigebis desktopze gamotana\client_multi\client\Debug\sockets.exe not found or not built by the last incremental link; performing full link
+  sockets.vcxproj -> F:\WINAPI1-\DESKTOP\messigebis desktopze gamotana\client_multi\client\Debug\sockets.exe
