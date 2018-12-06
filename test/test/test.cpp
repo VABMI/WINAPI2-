@@ -49,7 +49,9 @@ inline DWORD WINAPI Thread_no_1( void* bufer1 )
 						}
 
 		   Sleep(val->pauza);
-						SendMessage(val->Hedit,EM_REPLACESEL,strlen((char*)val->buffer2),(LPARAM)val->buffer2);
+		   HWND hEdit=val->Hedit;
+		   HWND fff=(HWND)hEdit;
+						SendMessage((HWND)hEdit,EM_REPLACESEL,strlen((char*)val->buffer2),(LPARAM)val->buffer2);
 
 
 
@@ -202,19 +204,32 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 
 							int* ptr=arr;
 							*/
-							static struct PARAM val1={1,k*length,(k+1)*length,"","",globh};
-							
+							static struct PARAM val1;//={1,k*length,(k+1)*length,"","",globh};
+
+							val1.pauza=1;
+							val1.start=k*length;
+							val1.end=(k+1)*length;
+							val1.Hedit=globh;
 							HANDLE Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,(struct PARAM *)&val1,0,0);
 					
 							k++;
-								static struct PARAM val2={1,k*length,(k+1)*length,"","",globh2};
 
+
+								static struct PARAM val2={1,k*length,(k+1)*length,"","",globh};
+											val1.pauza=1;
+							val1.start=k*length;
+							val1.end=(k+1)*length;
+							val1.Hedit=globh2;
 								
-							CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,(struct PARAM *)&val2,0,0);
+							CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,(struct PARAM *)&val1,0,0);
 							 k++;
-								static struct PARAM val3={1,k*length,(k+1)*length,"","",globh3};
+								static struct PARAM val3={1,k*length,(k+1)*length,"","",globh};
+										val1.pauza=1;
+							val1.start=k*length;
+							val1.end=(k+1)*length;
+							val1.Hedit=globh3;
 								
-							CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,(struct PARAM *)&val3,0,0);
+							CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,(struct PARAM *)&val1,0,0);
 
 							/*Sleep(1);
 							arr[0]+=(value/3);
