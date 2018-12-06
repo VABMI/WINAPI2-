@@ -4,7 +4,7 @@ void*soketss(SOCKET *sock)
 	
 char *ipin;
 //scanf("%s",&ipin);
-int port = 8080;
+int port = 8786;
 string ipAddress="188.169.18.47";
 cout<<"sheiyvane IP->: ";
 	//cin>>ipAddress;
