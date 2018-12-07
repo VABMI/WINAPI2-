@@ -1,8 +1,8 @@
 		struct PARAM
 					{
-						int pauza;
-						int start;
-						int end;
+						__int64 pauza;
+						__int64 start;
+						__int64 end;
 						char buffer[100];
 						char *buffer2;
 						HWND Hedit;

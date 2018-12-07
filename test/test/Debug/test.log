@@ -5,5 +5,6 @@ f:\winapi2-\test\test\test.cpp(44): warning C4996: 'strcat': This function or va
           d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
 f:\winapi2-\test\test\test.cpp(45): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
-f:\winapi2-\test\test\test.cpp(317): warning C4715: 'WinMain' : not all control paths return a value
+f:\winapi2-\test\test\test.cpp(51): warning C4244: 'argument' : conversion from '__int64' to 'DWORD', possible loss of data
+f:\winapi2-\test\test\test.cpp(329): warning C4715: 'WinMain' : not all control paths return a value
   test.vcxproj -> F:\WINAPI2-\test\Debug\test.exe

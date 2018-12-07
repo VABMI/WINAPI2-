@@ -31,9 +31,9 @@ inline DWORD WINAPI Thread_no_1( void* bufer1 )
 			val->init();
 			
 
-		   for(int i=val->start;i<=val->end;i++)
+		   for(__int64 i=val->start;i<=val->end;i++)
 						{
-							for(int j=2;j<i;j++)
+							for(__int64 j=2;j<i;j++)
 							{
 								if(i%j==0)
 									break;
@@ -166,14 +166,14 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 			{ 
 				
 				globh=hwnd;
-				RECT r;
+				RECT r;GetClientRect(hwnd,&r);
 				CreateWindow("edit","Main",WS_CHILD|WS_BORDER|WS_VISIBLE,0,0,150,30,hwnd,(HMENU)1,0,0);
 
 				CreateWindow("Button","gashveba",WS_CHILD|WS_BORDER|WS_VISIBLE,155,0,80,30,hwnd,(HMENU)2,0,0);
-				GetClientRect(hwnd,&r);
-				globh=CreateWindow("edit","aa",WS_CHILD|WS_BORDER|WS_VISIBLE|WS_VSCROLL|WS_HSCROLL|ES_MULTILINE,0,50,100,r.bottom-55,hwnd,(HMENU)3,0,0);
-				globh2=CreateWindow("edit","",WS_CHILD|WS_BORDER|WS_VISIBLE|WS_VSCROLL|WS_HSCROLL|ES_MULTILINE,120,50,100,r.bottom-55,hwnd,(HMENU)4,0,0);
-				globh3=CreateWindow("edit","",WS_CHILD|WS_BORDER|WS_VISIBLE|WS_VSCROLL|WS_HSCROLL|ES_MULTILINE,240,50,100,r.bottom-55,hwnd,(HMENU)5,0,0);
+				
+			//	globh=CreateWindow("edit","aa",WS_CHILD|WS_BORDER|WS_VISIBLE|WS_VSCROLL|WS_HSCROLL|ES_MULTILINE,0,50,100,r.bottom-55,hwnd,(HMENU)3,0,0);
+			//	globh2=CreateWindow("edit","",WS_CHILD|WS_BORDER|WS_VISIBLE|WS_VSCROLL|WS_HSCROLL|ES_MULTILINE,120,50,100,r.bottom-55,hwnd,(HMENU)4,0,0);
+			//	globh3=CreateWindow("edit","",WS_CHILD|WS_BORDER|WS_VISIBLE|WS_VSCROLL|WS_HSCROLL|ES_MULTILINE,240,50,100,r.bottom-55,hwnd,(HMENU)5,0,0);
 				SendMessage(globh,EM_SETLIMITTEXT,100000,0);
 
 
@@ -186,15 +186,19 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 
 				if(wparam==2)
 				{	
+						RECT r;
+						GetClientRect(hwnd,&r);
 					int k=0;
 					int dd=2;
 					SendMessage(globh,WM_SETTEXT,0,(LPARAM)"");
 					// int* arr=(int*)malloc(10);
 					//static int arr[100];
+
+					int d=10;
 					char bufer[10000];
 					SendMessage(GetDlgItem(hwnd,1),WM_GETTEXT,9999,(LPARAM)bufer);
-					int value=atoi(bufer);
-					int length=value/3;
+					__int64 value=atoi(bufer);
+					__int64 length=value/d;
 
 
 					/*
@@ -204,33 +208,41 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 
 							int* ptr=arr;
 							*/
-							static struct PARAM val1;//={1,k*length,(k+1)*length,"","",globh};
+							static struct PARAM val1;
+							
+							for(int i=0;i<d;i++)
+							{
 
+								globh=CreateWindow("edit","",WS_CHILD|WS_BORDER|WS_VISIBLE|WS_VSCROLL|WS_HSCROLL|ES_MULTILINE,110*i,50,100,r.bottom-55,hwnd,(HMENU)3+i,0,0);
+								SendMessage(globh,EM_SETLIMITTEXT,100000,0);
+								val1.pauza=1;
+								val1.start=k*length;
+								val1.end=(k+1)*length;
+								val1.Hedit=globh;
+								HANDLE Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,(struct PARAM *)&val1,0,0);
+								Sleep(100);
+								k++;
+
+							}
+							
+							/*
+								static struct PARAM val2={1,k*length,(k+1)*length,"","",globh};
 							val1.pauza=1;
 							val1.start=k*length;
 							val1.end=(k+1)*length;
 							val1.Hedit=globh;
-							HANDLE Thread1=CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,(struct PARAM *)&val1,0,0);
-					
-							k++;
-
-
-								static struct PARAM val2={1,k*length,(k+1)*length,"","",globh};
-											val1.pauza=1;
-							val1.start=k*length;
-							val1.end=(k+1)*length;
-							val1.Hedit=globh2;
 								
 							CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,(struct PARAM *)&val1,0,0);
+							Sleep(100);
 							 k++;
 								static struct PARAM val3={1,k*length,(k+1)*length,"","",globh};
 										val1.pauza=1;
 							val1.start=k*length;
 							val1.end=(k+1)*length;
-							val1.Hedit=globh3;
+							val1.Hedit=globh;
 								
 							CreateThread(0,0,(LPTHREAD_START_ROUTINE)Thread_no_1,(struct PARAM *)&val1,0,0);
-
+							*/
 							/*Sleep(1);
 							arr[0]+=(value/3);
 							arr[1]+=(value/3);
