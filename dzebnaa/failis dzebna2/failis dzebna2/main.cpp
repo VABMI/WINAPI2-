@@ -21,24 +21,30 @@ hf=FindFirstFileW(srchpath,&ffdata);
 	if(hf == INVALID_HANDLE_VALUE)
 	return FALSE;
 
-wcscpy(srchpath,fname);
+		wcscpy(srchpath,fname);
+		if(FindNextFileW(hf,&ffdata))
+		{
+		wcscpy(fname,ffdata.cFileName);
+		MessageBoxW(0,fname,0,0);
+		}
+/*
 bool bSearch = true;
 	while(bSearch)
 	{
 		if(FindNextFileW(hf,&ffdata))
 		{
 		wcscpy(fname,ffdata.cFileName);
-		MessageBoxW(0,fname,0,0);
+	//	MessageBoxW(0,fname,0,0);
 			if(fname[wcslen(fname)-1] !=L'.')
 			{
 				if((ffdata.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY))
 				{
 				wsprintfW(fname,L"%s\\%s",path,ffdata.cFileName);
-				MessageBoxW(0,fname,0,0);
+				//MessageBoxW(0,fname,0,0);
 					if(!find_file_in_dir(fname))
 					{
 					FindClose(hf);
-					return FALSE;
+				//	return FALSE;
 					}
 				wcscpy(fname,srchpath);
 				}
@@ -55,6 +61,8 @@ bool bSearch = true;
 			}
 		}
 	}
+
+	*/
 FindClose(hf);
 return 0;
 }
@@ -71,5 +79,5 @@ WNDCLASSEX wcex;
 GetClassInfoEx(0,buff,&wcex);
 
 
-find_file_in_dir(L"C:\\Intel\\ExtremeGraphics\\CUI\\Resource");
+find_file_in_dir(L"C:\\Intel\\");
 }

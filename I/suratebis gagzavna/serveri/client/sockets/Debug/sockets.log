@@ -1,0 +1,7 @@
+﻿  main.cpp
+f:\winapi2-\i\client_multi\client\sockets\main.cpp(61): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\winapi2-\i\client_multi\client\sockets\main.cpp(76): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+  LINK : F:\WINAPI2-\I\client_multi\client\Debug\sockets.exe not found or not built by the last incremental link; performing full link
+  sockets.vcxproj -> F:\WINAPI2-\I\client_multi\client\Debug\sockets.exe
