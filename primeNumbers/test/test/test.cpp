@@ -162,8 +162,9 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 				RECT r;
 				GetClientRect(hwnd,&r);
 				CreateWindow("edit","Main",WS_CHILD|WS_BORDER|WS_VISIBLE,0,0,150,30,hwnd,(HMENU)1,0,0);
+					CreateWindow("edit","sridebis raodenoba",WS_CHILD|WS_BORDER|WS_VISIBLE,155,0,150,30,hwnd,(HMENU)1300,0,0);
+				CreateWindow("Button","gashveba",WS_CHILD|WS_BORDER|WS_VISIBLE,360,0,80,30,hwnd,(HMENU)2,0,0);
 
-				CreateWindow("Button","gashveba",WS_CHILD|WS_BORDER|WS_VISIBLE,155,0,80,30,hwnd,(HMENU)2,0,0);
 					
 //				for(int i=0;i<d;i++)
 				{
@@ -212,7 +213,10 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 						// int* arr=(int*)malloc(10);
 						//static int arr[100];
 
-						int d=20;
+						int d;
+						char SridebisRaodenoba[10];
+						GetWindowText(GetDlgItem(hwnd,1300),SridebisRaodenoba,8);
+						d=atoi(SridebisRaodenoba);
 						char bufer[10000];
 						SendMessage(GetDlgItem(hwnd,1),WM_GETTEXT,9999,(LPARAM)bufer);
 						__int64 value=atoi(bufer);

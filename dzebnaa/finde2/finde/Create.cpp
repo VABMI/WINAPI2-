@@ -1,6 +1,6 @@
 			CreateWindow(L"edit",L"",WS_VISIBLE|WS_CHILD|WS_BORDER|ES_MULTILINE|WS_VSCROLL,120,0,160,20,hwnd,(HMENU)2,0,0);
 			HWND combo=CreateWindow(L"combobox",L"ssss",WS_VISIBLE|WS_CHILD|WS_BORDER|CBS_DROPDOWN | CBS_HASSTRINGS | CBS_SIMPLE |WS_VSCROLL|CBS_HASSTRINGS,0,0,100,190,hwnd,(HMENU)15,0,0);
-		//	SendMessage(combo,CB_ADDSTRING,0,(LPARAM)L"C:");
+			SendMessage(combo,CB_ADDSTRING,0,(LPARAM)L"C:");
 			SendMessage(combo,CB_ADDSTRING,0,(LPARAM)L"A:");
 			SendMessage(combo,CB_ADDSTRING,0,(LPARAM)L"B:");
 			SendMessage(combo,CB_ADDSTRING,0,(LPARAM)L"D:");

