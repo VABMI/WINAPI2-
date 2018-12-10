@@ -1,0 +1,6 @@
+﻿sndPlay.obj : error LNK2019: unresolved external symbol __imp__mciSendCommandW@16 referenced in function "int __cdecl sndPlayOpen(wchar_t *)" (?sndPlayOpen@@YAHPA_W@Z)
+sndRec.obj : error LNK2001: unresolved external symbol __imp__mciSendCommandW@16
+sndPlay.obj : error LNK2019: unresolved external symbol __imp__mciGetErrorStringW@12 referenced in function "void __cdecl sndPlayGetLastError(wchar_t *)" (?sndPlayGetLastError@@YAXPA_W@Z)
+sndRec.obj : error LNK2001: unresolved external symbol __imp__mciGetErrorStringW@12
+MSVCRTD.lib(crtexe.obj) : error LNK2019: unresolved external symbol _main referenced in function ___tmainCRTStartup
+F:\WINAPI2-\audio\recoder\Debug\recoder.exe : fatal error LNK1120: 3 unresolved externals

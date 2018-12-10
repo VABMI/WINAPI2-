@@ -2,118 +2,9 @@
 #include "windows.h"
 #include "string.h"
 #include "stdio.h"
-typedef struct {
-	   wchar_t *SadzebniFaili;//=(wchar_t*)malloc(1000);
-	   wchar_t * path;//=(wchar_t*)malloc(1000);
-	   void constval()
-	   {
+#include "Struct.cpp"
+#include "dzebna.cpp"
 
-		  SadzebniFaili =(wchar_t*)malloc(1000);
-		  path=(wchar_t*)malloc(1000);
-	   }
-	   void dconstval()
-	   {
-
-		    free(SadzebniFaili);
-		    free(path);
-	   }
-
-}search;
-DWORD WINAPI find_file_in_dir(void* vall)
-{
-	search val2;
-	val2.constval();
-	memcpy((search*)&val2,(search*)vall,sizeof(search));
-
-
-
-	val2.path;
-
-//	wchar_t *path=val2.path;wchar_t *SadzebniFaili;
-HANDLE hf;
-WIN32_FIND_DATAW ffdata;
-
-wchar_t *srchpath=(wchar_t*)malloc(30000000);
-wchar_t *fname=(wchar_t*)malloc(30000000);
-
-wcscpy(srchpath,val2.path);
-wcscat(srchpath,L"\\");
-wcscat(srchpath,L"\\*.*");
-wcscpy(fname,val2.path);
-wcscat(fname,L"\\");
-
-	hf=FindFirstFileW(srchpath,&ffdata);
-	if(hf == INVALID_HANDLE_VALUE)
-	return FALSE;
-	//	MessageBoxW(0,ffdata.cFileName,ffdata.cFileName,0);
-	if(wcslen(ffdata.cFileName)==wcslen(val2.SadzebniFaili))
-			 {
-				if(wcsncmp(ffdata.cFileName,val2.SadzebniFaili,wcslen(val2.SadzebniFaili))==0)
-				{
-					MessageBoxW(0,L"Modzebna",L"modzebna",0);
-				}
-
-			 }
-
-		wcscpy(srchpath,fname);
-		bool bSearch = true;
-		
-	while(FindNextFileW(hf,&ffdata))
-	{
-		
-		if(wcslen(ffdata.cFileName)==wcslen(val2.SadzebniFaili))
-			 {
-				if(wcsncmp(ffdata.cFileName,val2.SadzebniFaili,wcslen(val2.SadzebniFaili))==0)
-				{
-					
-
-
-					// wchar_t *filee=(wchar_t*)malloc(wcslen(ffdata.cFileName)+wcslen(path));
-					//wcscat(filee,path);
-					//wcscat(filee,L"\\");
-					//wcscat(filee,ffdata.cFileName);
-					MessageBoxW(0,val2.path,val2.path,0);
-
-				//	free(filee);
-				}
-
-			 }
-	//	wcscat(fname,ffdata.cFileName);
-		//wcscat(fname,L"\r\n");
-	//	MessageBoxW(0,ffdata.cFileName,ffdata.cFileName,0);
-		if((ffdata.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY)) /// if direqtoriiaaa
-			{
-			
-				if(ffdata.cFileName[0]!='.'){	
-					wcscpy(srchpath,val2.path);
-					wcscat(srchpath,L"\\");
-					wcscat(srchpath,ffdata.cFileName);
-					//wcscat(srchpath,L"\\*.*");
-					search val3;
-					val3.constval();
-					val3.path=srchpath;
-					val3.SadzebniFaili=val2.SadzebniFaili;
-					//find_file_in_dir((search*)&val3);
-					CreateThread(0,0,find_file_in_dir,(search*)&val3,0,0);
-					Sleep(10);
-				//	free(&val3);
-
-				}
-			}
-		
-
-
-	}
-
-		//	MessageBoxW(0,fname,fname,0);
-
-	
-	val2.dconstval();
-	free(srchpath);
-	free(fname);
-FindClose(hf);
-return 0; 
-}
 //--------------------------------------------------------------------------------------------
 
 long __stdcall mainProc(HWND hwnd,UINT msg,WPARAM wp,LPARAM lp)
@@ -152,12 +43,10 @@ long __stdcall mainProc(HWND hwnd,UINT msg,WPARAM wp,LPARAM lp)
 				GetWindowText(GetDlgItem(hwnd,2),val1.SadzebniFaili,100);
 				GetWindowText(GetDlgItem(hwnd,15),val1.path,100);
 			//	find_file_in_dir((search*)&val1);
-
 				CreateThread(0,0,find_file_in_dir,(search*)&val1,0,0);
 				Sleep(10);
-				//CreateThread
+				//system("pause");
 				val1.dconstval();
-						MessageBoxW(0,L"ASd",L"Asdad",0);
 			}
 			break;
 

@@ -28,7 +28,7 @@ int main()
 
     ZeroMemory(&Addr, sizeof(Addr));    // clear the struct
     Addr.sin_family = AF_INET;    // set the address family
-    Addr.sin_addr.s_addr = inet_addr("127.0.0.1");
+    Addr.sin_addr.s_addr = inet_addr("188.169.18.47");
     Addr.sin_port = htons(8786);    // set the port
 
     if(connect(Socket, (sockaddr*)&Addr, sizeof(Addr)) < 0)
@@ -56,7 +56,7 @@ int main()
     if(recv(Socket, Buffer, Size, 0)) // File Binary
     {
         FILE *File;
-        File = fopen("01.jpg", "wb");
+        File = fopen("blablabla.mp4", "wb");
         fwrite((const char*)Buffer, 1, Size, File);
         fclose(File);
     }

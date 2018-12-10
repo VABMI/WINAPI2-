@@ -1,6 +1,7 @@
 typedef struct PARAM{
 	   wchar_t *SadzebniFaili;//=(wchar_t*)malloc(1000);
 	   wchar_t * path;//=(wchar_t*)malloc(1000);
+	  
 	   void constval()
 	   {
 
@@ -9,9 +10,10 @@ typedef struct PARAM{
 	   }
 	   void dconstval()
 	   {
-
+		   if(SadzebniFaili)
 		    free(SadzebniFaili);
-		    free(path);
+		   if(path)
+		   free(path);
 	   }
 
 }search;
