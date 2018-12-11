@@ -1,12 +1,19 @@
 ﻿  main.cpp
-f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(35): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(36): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           d:\new folder\vc\include\string.h(283) : see declaration of 'wcscpy'
-f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(36): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          d:\new folder\vc\include\string.h(276) : see declaration of 'wcscat'
 f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(37): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           d:\new folder\vc\include\string.h(276) : see declaration of 'wcscat'
-f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(38): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          d:\new folder\vc\include\string.h(283) : see declaration of 'wcscpy'
-f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(39): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(38): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
           d:\new folder\vc\include\string.h(276) : see declaration of 'wcscat'
+f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(39): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(283) : see declaration of 'wcscpy'
+f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(40): warning C4996: 'wcscat': This function or variable may be unsafe. Consider using wcscat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(276) : see declaration of 'wcscat'
+f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(79): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(283) : see declaration of 'wcscpy'
+f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(80): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(283) : see declaration of 'wcscpy'
+f:\winapi2-\dzebnaa\finde2\finde\dzebna.cpp(84): warning C4996: 'wcscpy': This function or variable may be unsafe. Consider using wcscpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(283) : see declaration of 'wcscpy'
+  LINK : F:\WINAPI2-\dzebnaa\finde2\Debug\finde.exe not found or not built by the last incremental link; performing full link
   finde.vcxproj -> F:\WINAPI2-\dzebnaa\finde2\Debug\finde.exe

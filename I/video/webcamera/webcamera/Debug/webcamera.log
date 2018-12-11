@@ -1,0 +1,149 @@
+﻿  main.cpp
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(40): error C2143: syntax error : missing ',' before '...'
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(61): error C2975: 'cv::sfinae::has_parenthesis_operator' : invalid template argument for 'unnamed-parameter', expected compile-time constant expression
+          d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(42) : see declaration of 'cv::sfinae::has_parenthesis_operator'
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(61): error C2955: 'cv::sfinae::has_parenthesis_operator' : use of class template requires template argument list
+          d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(42) : see declaration of 'cv::sfinae::has_parenthesis_operator'
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(96): error C4519: default template arguments are only allowed on a class template
+          d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(133) : see reference to class template instantiation 'cv::Ptr<T>' being compiled
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(135): error C2143: syntax error : missing ',' before '...'
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(136): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(136): error C2143: syntax error : missing ',' before '&'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(66): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(67): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(67): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(67): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(67): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(67): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(67): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(194): error C2059: syntax error : ';'
+d:\new folder\vc\include\opencv2\core\mat.hpp(194): error C2238: unexpected token(s) preceding ';'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(262): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(263): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(263): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(263): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(263): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(263): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(263): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(319): error C2059: syntax error : ';'
+d:\new folder\vc\include\opencv2\core\mat.hpp(319): error C2238: unexpected token(s) preceding ';'
+d:\new folder\vc\include\opencv2\core\mat.hpp(321): error C2059: syntax error : ';'
+d:\new folder\vc\include\opencv2\core\mat.hpp(321): error C2238: unexpected token(s) preceding ';'
+d:\new folder\vc\include\opencv2\core\mat.hpp(390): error C2059: syntax error : ';'
+d:\new folder\vc\include\opencv2\core\mat.hpp(390): error C2238: unexpected token(s) preceding ';'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'underlying_type' : is not a member of 'std'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2143: syntax error : missing ';' before '<'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2039: 'type' : is not a member of '`global namespace''
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2061: syntax error : identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(566): error C2146: syntax error : missing '(' before identifier 'UnderlyingType'
+d:\new folder\vc\include\opencv2\core\mat.hpp(1007): error C4519: default template arguments are only allowed on a class template
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(96): error C4519: default template arguments are only allowed on a class template
+          d:\new folder\vc\include\opencv2\core\persistence.hpp(457) : see reference to class template instantiation 'cv::Ptr<T>' being compiled
+          with
+          [
+              T=cv::FileStorage::Impl
+          ]
+d:\new folder\vc\include\opencv2\core\persistence.hpp(1066): error C4519: default template arguments are only allowed on a class template
+d:\new folder\vc\include\opencv2\core\persistence.hpp(1162): error C4519: default template arguments are only allowed on a class template
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(96): error C4519: default template arguments are only allowed on a class template
+          d:\new folder\vc\include\opencv2\core.hpp(3041) : see reference to class template instantiation 'cv::Ptr<T>' being compiled
+          with
+          [
+              T=cv::Formatted
+          ]
+d:\new folder\vc\include\opencv2\core\cvstd_wrapper.hpp(96): error C4519: default template arguments are only allowed on a class template
+          d:\new folder\vc\include\opencv2\core.hpp(3051) : see reference to class template instantiation 'cv::Ptr<T>' being compiled
+          with
+          [
+              T=cv::Formatter
+          ]
+d:\new folder\vc\include\opencv2\core.hpp(3171): error C2332: 'enum' : missing tag name
+d:\new folder\vc\include\opencv2\core.hpp(3171): error C2236: unexpected 'struct' 'cv::Param'. Did you forget a ';'?
+d:\new folder\vc\include\opencv2\core.hpp(3171): error C3381: 'cv::Param' : assembly access specifiers are only available in code compiled with a /clr option
+d:\new folder\vc\include\opencv2\core.hpp(3172): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core.hpp(3172): error C2864: 'cv::Param::INT' : only static const integral data members can be initialized within a class
+d:\new folder\vc\include\opencv2\core.hpp(3172): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core.hpp(3172): error C2864: 'cv::Param::BOOLEAN' : only static const integral data members can be initialized within a class
+d:\new folder\vc\include\opencv2\core.hpp(3172): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+d:\new folder\vc\include\opencv2\core.hpp(3172): error C2864: 'cv::Param::REAL' : only static const integral data members can be initialized within a class
+d:\new folder\vc\include\opencv2\core.hpp(3172): fatal error C1003: error count exceeds 100; stopping compilation

