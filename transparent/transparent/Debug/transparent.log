@@ -1,0 +1,6 @@
+﻿  transparent.cpp
+f:\winapi2-\transparent\transparent\transparent.cpp(306): warning C4101: 'rect' : unreferenced local variable
+f:\winapi2-\transparent\transparent\transparent.cpp(304): warning C4101: 'ps' : unreferenced local variable
+f:\winapi2-\transparent\transparent\transparent.cpp(307): warning C4101: 'name' : unreferenced local variable
+f:\winapi2-\transparent\transparent\transparent.cpp(305): warning C4101: 'hdc' : unreferenced local variable
+  transparent.vcxproj -> F:\WINAPI2-\transparent\Debug\transparent.exe

@@ -58,7 +58,7 @@ int main()
         char *Buffer;
         unsigned long Size;
 
-        File = fopen("C:\\Users\\vakho1\\Desktop\\videoplayback.mp4", "rb");
+        File = fopen("C:\\Users\\vakho1\\Desktop\\77.mp4", "rb");
         if(!File)
         {
             printf("Error while readaing the file\n");

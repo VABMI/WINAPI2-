@@ -25,7 +25,7 @@
 							}
 							if(returns ==1)
 							{
-								userInput="0 \n";
+								userInput="1 \n";
 								sendResult = send(sock,userInput.c_str(),userInput.size()+1,0);
 								firststart=1;
 							}

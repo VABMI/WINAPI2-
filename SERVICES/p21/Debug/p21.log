@@ -1,0 +1,12 @@
+﻿  p21.cpp
+f:\winapi2-\services\p21\mouse_msg.cpp(18): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\p21\cmd_msg.cpp(8): warning C4101: 'hfontPrev' : unreferenced local variable
+f:\winapi2-\services\p21\cmd_msg.cpp(135): warning C4101: 'val2' : unreferenced local variable
+f:\winapi2-\services\p21\cmd_msg.cpp(134): warning C4101: 'val1' : unreferenced local variable
+f:\winapi2-\services\p21\paint.cpp(11): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\p21\cmd_msg.cpp(24): warning C4700: uninitialized local variable 'hdc' used
+f:\winapi2-\services\p21\on_create.cpp(19): warning C4715: 'create_menu' : not all control paths return a value
+f:\winapi2-\services\p21\p21.cpp(89): warning C4715: 'WinMain' : not all control paths return a value
+  p21.vcxproj -> F:\WINAPI2-\SERVICES\p21\.\Debug\p21.exe

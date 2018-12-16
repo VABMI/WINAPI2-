@@ -10,6 +10,7 @@ else if(buf[0]=='I'&&buf[1]=='M'&&buf[2]=='G')
 		{
 				buf[sigrdze-2]='\0';
 				//MessageBox(0,buf,buf,0);
+					
 		}
 
 		
@@ -22,6 +23,8 @@ else if(buf[0]=='I'&&buf[1]=='M'&&buf[2]=='G')
 		{	
 			printf("Error while readaing the file\n");
 				//	goto End1;
+			send((SOCKET)sock, "faili ar waikitxa:\n",strlen("faili ar waikitxa:\n"), 0);
+
 		}
 		else
 		{

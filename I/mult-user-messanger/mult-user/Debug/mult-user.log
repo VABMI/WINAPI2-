@@ -1,0 +1,13 @@
+﻿  main.cpp
+f:\winapi2-\i\mult-user-messanger\mult-user\readwrite.cpp(6): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\winapi2-\i\mult-user-messanger\mult-user\readwrite.cpp(23): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\i\mult-user-messanger\mult-user\readwrite.cpp(42): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\winapi2-\i\mult-user-messanger\mult-user\readwrite.cpp(62): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\winapi2-\i\mult-user-messanger\mult-user\readwrite.cpp(60): warning C4101: 'buf' : unreferenced local variable
+f:\winapi2-\i\mult-user-messanger\mult-user\main.cpp(96): warning C4018: '<' : signed/unsigned mismatch
+  LINK : F:\WINAPI2-\I\mult-user-messanger\Debug\mult-user.exe not found or not built by the last incremental link; performing full link
+  mult-user.vcxproj -> F:\WINAPI2-\I\mult-user-messanger\Debug\mult-user.exe
