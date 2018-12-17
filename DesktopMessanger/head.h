@@ -30,6 +30,18 @@ using namespace std;
 #pragma comment(linker,"/manifestdependency:\"type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"")
 #endif
 
+#pragma comment(linker,"\"/manifestdependency:type='win32' \
+name='Microsoft.Windows.Common-Controls' version='6.0.0.0' \
+processorArchitecture='*' publicKeyToken='6595b64144ccf1df' language='*'\"") 
+
+
+
+#include "CreateGradientBrush.cpp"
+
 
 HBITMAP s_hBitmap = NULL;
-LPCWSTR s_szFile = L"C:\\Users\\vakho1\\Desktop\\1200x900\\11.bmp";
+LPCWSTR s_szFile = L"11.bmp";
+#define CLOSE 1313
+#define ACTIVEBOW 1314
+HWND HwndParent;
+#define SAVEBUTTON 1315

@@ -74,7 +74,7 @@ char *read1(char *path)
 	}
 	else
 		{
-		//	while(fgetc(c,size, 1, file));
+		
 		fread(cv,size,1,file);
 		cv[size]=0;
 		fclose(file);

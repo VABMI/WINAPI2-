@@ -47,17 +47,19 @@ while(1)
 			int bytesReceived = recv((unsigned __int64 )sock,buf,4096,0);
 			if(bytesReceived>0)
 			{
-				if(strlen(buf)>0){
+				if(strlen(buf)>0&&buf[0]!='@'){
 			//	cout <<string(buf,0,bytesReceived)<<endl;
 				
 					//ShowWindow((HWND)sock1,0);
 					SendMessage(hwnd1,EM_REPLACESEL,strlen(buf),(LPARAM)buf);
 
 				}
-			
-			//	MessageBox(0,"asdasd","Asdasd",0);
-
-
+				//////////////////// userebis gamotanaaa ////////////////////////
+				else if(buf[0]=='@')
+				{			buf[0]=' ';
+					MessageBox(HwndParent,buf,buf,0);
+				}
+			//////////////////////////////////////////////////////////////////////
 			}
 			else{
 
@@ -78,8 +80,40 @@ while(1)
 return 0;
 }
 
+//---------------------------------------------
+DWORD WINAPI ACTIVENOW(HWND sock1,char *name)
+{
+	char USERSBUF[9024];
+
+	
+			int sendResult = send((unsigned __int64) sock,"@",2,0);
+			if(sendResult)
+			{
+				ZeroMemory(USERSBUF,9024);
+				int bytesReceived1=0 ;//= recv((unsigned __int64 )sock,USERSBUF,9024,0);
+				if(bytesReceived1>0)
+				{
+					if(USERSBUF[0]=='@')
+					{		
+							if(bytesReceived1>0)
+							{
+							//	MessageBox(0,USERSBUF,USERSBUF,0);
+
+							}
+						
+
+					}
+			
+				//MessageBox(0,"asdasd","Asdasd",0);
 
 
+				}
+		
+
+			}
+
+	return 0;
+}
 //---------------------------------------------
 void SocketisSheqmna(HWND hwnd)
 {
@@ -131,8 +165,10 @@ if(connResult == SOCKET_ERROR)
 	return;
 
 }
+
+//////////////////////// shesvlis dros dzveli smsebis gamotanaaa ////////////////////////////////////////
 			char buff[10];
-	//char *buf=(char*)malloc(4000096);
+			//char *buf=(char*)malloc(4000096);
 			ZeroMemory(buff,sizeof(buff));
 			int bytesReceived = recv((unsigned __int64 )sock,buff,10,0);
 			int sizee=atoi(buff);
@@ -151,16 +187,12 @@ if(connResult == SOCKET_ERROR)
 				
 					//free(buf);
 					
-					//cout<< "\nSERVER> " <<string(buf,0,bytesReceived)<<endl;
 				}
 			}
 
+////////////////////////END  shesvlis dros dzveli smsebis gamotanaaa ////////////////////////////////////////
 
 	HANDLE fgh=CreateThread(NULL,NULL,RECIVE,(void*)hwnd,0,NULL);
-	//CreateThread(NULL,NULL,SEND,(void*)&namee,0,NULL);
-//   SEND((void*)&namee);
- 
-///WSACleanup(); es gatishvis gilakze
 
 
 }
@@ -171,14 +203,17 @@ DWORD WINAPI SEND(HWND sock1,char *name)
 	char *userInput=(char*) malloc(100);
 	char *sendU=(char*) malloc(1000);
 
-		
-		
+	
+	
 
 		//cout<< "clienti > ";
 		//scanf("%s",userInput,stdin);
 		ZeroMemory(userInput,sizeof(userInput));
 		ZeroMemory(sendU,sizeof(userInput));
 		GetWindowText(sock1,userInput,99);
+		
+
+
 		if(userInput[0]==13)
 		{
 			userInput[0]=' ';

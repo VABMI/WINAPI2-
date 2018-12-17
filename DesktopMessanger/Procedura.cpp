@@ -1,12 +1,21 @@
 
 HWND hwndeditout=NULL; 
 HWND    g_hwndButton            = NULL;  
-HWND       g_hwndButton1	=	NULL;
+
 WNDPROC g_wndProcButtonOrigianl = NULL;   
 BOOL    g_bSeeingMouse          = FALSE;
 
 
 
+HWND       g_hwndButton1	=	NULL;
+WNDPROC g_wndProcButtonOrigianlR = NULL;   
+
+
+
+
+
+WNDPROC g_wndProcButtonOrigianlX = NULL;
+HWND buttonX;
 
 
 LRESULT CALLBACK edit (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
@@ -116,4 +125,48 @@ LRESULT CALLBACK edit2 (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 
 
     return CallWindowProc( g_wndProcButtonOrigianl, hwnd, message, wParam, lParam );
+}
+
+
+
+
+
+LRESULT CALLBACK buttonXX (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+	 if(message==WM_MOUSEMOVE)
+	 {
+				HCURSOR hCursor=LoadCursorFromFile("Glove Normal.cur");
+				SetCursor(hCursor);
+				SetClassLong(hwnd, -12, (DWORD)hCursor);
+
+
+
+
+
+
+
+	 }
+
+    return CallWindowProc( g_wndProcButtonOrigianlX, hwnd, message, wParam, lParam );
+}
+
+LRESULT CALLBACK button1 (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
+{
+
+	 switch( message )
+    {
+	 
+
+		  case WM_MOUSEMOVE:
+
+				HCURSOR	 hCursor=LoadCursorFromFile("4.ico");
+				SetCursor(hCursor);
+				SetClassLong(hwnd, -12, (DWORD)hCursor);
+
+
+			  break;
+
+    }
+	 	
+    return CallWindowProc( g_wndProcButtonOrigianlR, hwnd, message, wParam, lParam );
 }

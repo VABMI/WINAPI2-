@@ -21,6 +21,11 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 {
 	switch(message)
 	{
+
+		#include "Wm_notify.cpp"
+
+
+		break;
 		case WM_CREATE:
 			{RECT r;
 			GetClientRect(GetDesktopWindow(),&r);
@@ -36,7 +41,7 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 		
 		case WM_RBUTTONDOWN:
 		case WM_LBUTTONDOWN:
-		case WM_MOUSEMOVE:
+//		case WM_MOUSEMOVE:
 		case WM_RBUTTONDBLCLK:
 		case WM_LBUTTONDBLCLK:
 	//	on_mouse(hwnd,message,wparam,lparam);
@@ -168,7 +173,7 @@ RECT r;
 GetClientRect(GetDesktopWindow(),&r);
 X=r.right-350;Y=0;W=350;H=r.bottom-40;
 hwnd=CreateWindowEx(WS_EX_LAYERED,wcex.lpszClassName,"Main",WS_POPUP|WS_CLIPCHILDREN|WS_VISIBLE,X,Y,W,H,0,0,hInstance,0);
-
+HwndParent=hwnd;
 			SetLayeredWindowAttributes(hwnd,  0,  
 				(255 * 100) / 100, LWA_ALPHA);
 

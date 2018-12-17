@@ -48,29 +48,64 @@ int ctrl_id = (unsigned short)wparam;
 		RECT r;
 		GetClientRect(GetDesktopWindow(),&r);
 		int X,Y,W,H;
+		X=r.right-350;Y=0;W=350;H=r.bottom-40;
 
-	X=r.right-350;Y=0;W=350;H=r.bottom-40;
-		if(ShowHide==0)
-	{
-			HCURSOR hCursor=LoadCursorFromFile("F:\\WINAPI2-\\DesktopMessanger\\Debug\\5.ico");
-			SetCursor(hCursor);
-			SetClassLong(g_hwndButton, -12, (DWORD)hCursor);
-		ShowHide=1;
-		SetWindowPos(hwnd,0,r.right-10,0,W,H,0);
-	}
-	else
-	{
+			if(ShowHide==0)
+		{
+		
+			ShowHide=1;
+			SetWindowPos(hwnd,0,r.right-10,0,W,H,0);
+		}
+		else
+		{
 
-
-			HCURSOR hCursor=LoadCursorFromFile("F:\\WINAPI2-\\DesktopMessanger\\Debug\\4.ico");
-	SetCursor(hCursor);
-	SetClassLong(g_hwndButton, -12, (DWORD)hCursor);
-
-
-		SetWindowPos(hwnd,0,X,Y,W,H,0);
-		ShowHide=0;
-	}
+			SetWindowPos(hwnd,0,X,Y,W,H,0);
+			ShowHide=0;
+			
+		}
 		
 	}
+
+
+		else if(ctrl_id==CLOSE)
+		{
+			WSACleanup();
+			exit(1);
+
+		}
+
+		else if(ACTIVEBOW==ctrl_id)
+		{
+
+				ACTIVENOW(hwnd,"asdad");
+			
+
+		
+		
+		}
+
+		else if(SAVEBUTTON==ctrl_id)
+		{
+					send((unsigned __int64) sock,"~",strlen("~")+1,0);
+			char userInput[20];
+			GetWindowText(GetDlgItem(hwnd,23),userInput,19);
+			send((unsigned __int64) sock,userInput,strlen(userInput)+1,0);
+			/*
+				if(strcmp(user2,userInput)!=0)
+			{
+
+				strcpy(user2,userInput);
+
+				MessageBox(0,"ar gaigzavna","error",0);
+
+			}
+
+			*/
+
+
+
+		}
+
+
 return 0;
 }

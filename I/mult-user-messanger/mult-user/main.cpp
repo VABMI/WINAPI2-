@@ -50,6 +50,7 @@ void main()
 	fd_set master;
 	FD_ZERO(&master);
 	FD_SET(listening,&master);
+	
 	while(true)
 	{
 
@@ -72,9 +73,7 @@ void main()
 					send(client,(const char*)"1",1,0);
 			//	Read("F:\\WINAPI2-\\I\\mult-user-messanger\\mult-user\\SMS.txt", client);
 					send(client,(const char*)" ",1,0);
-
-
-
+			
 				//free(buff12);
 			}
 
@@ -93,18 +92,120 @@ void main()
 				else
 				{
 					Save(buf,"F:\\WINAPI2-\\I\\mult-user-messanger\\mult-user\\SMS.txt");
-					for(int i=0;i<master.fd_count;i++)
+					//////////////////////////////////////////// userebis gamotana  ACTIVE NOW ////////////////////////////
+					if(buf[0]=='@')
 					{
-						SOCKET outSock = master.fd_array[i];
-						if(outSock != listening && outSock !=sock)
+						ZeroMemory(buf,4096);
+						strcat(buf,"@");
+						strcat(buf,"USEREBIIII");
+							if(send(sock,buf,strlen(buf),0))
+							{
+								//MessageBox(0,"gaigzavna",0,0);
+
+							}
+
+
+					}
+						////////////////////////////////////////////END userebis gamotana  ACTIVE NOW ////////////////////////////
+					//////////////////////////////////// registraciaaaa //////////////////////////////////////
+
+
+					/*
+					if(buf[0]=='~')
+					{///F:\\WINAPI2-\\I\\mult-user-messanger\\mult-user\\USERS.txt
+
+						char buf[100];
+							ZeroMemory(buf,4096);
+								bytesIn = recv(sock,buf,4096,0);
+								/////////////////////////////////////////////////////////////////////////////
+							FILE *file;
+							file=fopen("F:\\WINAPI2-\\I\\mult-user-messanger\\mult-user\\USERS.txt","rb");
+
+	
+							fseek(file,0,SEEK_END);
+							int size=ftell(file);
+							fseek(file,0,SEEK_SET);
+
+							 char *cv;	
+							 cv=( char*)malloc(size);
+							if(cv==NULL){
+
+							}
+							else
+								{
+									char users[20];
+
+								 while(!feof(file))
+								 {
+									 
+									fgets(users,size,file);
+									////////////// enteris mocileba ////////////////
+									if(users[strlen(users)-2]==13)
+									{
+
+										users[strlen(users)-2]=0;
+									}
+									///////////////////////////////////////////////
+
+										if(strcmp(users,buf)!=0)
+										{	
+											strcat(cv,users);
+											strcat(cv,"\r\n");
+										MessageBox(0,users,users,0);
+										}
+										else
+										{
+
+
+
+											goto L;
+										}
+								 }			
+								/////////////////////// failshi chawera user userebis /////////////////////
+								 MessageBox(0,cv,users,0);
+								 ///////////////////////////////////////////////////////////////////////
+								 L:
+									fclose(file);
+							}
+						
+							/////////////////////////////////////////////////////////////////////////////
+						//strcat(userr,"\r\n");
+						////////// chawera active userebis failshi  //////
+					//	buf[0]=' ';
+
+
+
+					
+
+					
+						if(bytesIn)
 						{
-							send(outSock,buf,bytesIn,0);
 
-
+						//	MessageBox(0,buf,cv,0);
+						
 						}
+						
 
 					}
 
+						*/
+					////////////////////////////////////////////////////////////////////////////////////////////////
+					
+					
+					else
+					{
+						for(int i=0;i<master.fd_count;i++)
+						{
+							SOCKET outSock = master.fd_array[i];
+							if(outSock != listening && outSock !=sock)
+							{
+								send(outSock,buf,bytesIn,0);
+
+
+							}
+
+						}
+					}
 				}
 			
 			}
