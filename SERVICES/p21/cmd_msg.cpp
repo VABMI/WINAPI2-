@@ -29,7 +29,7 @@ return hfont;
 
   SC_HANDLE service;
 
-#define srvName "aaaaaa"
+#define srvName "4444"
   
 long __stdcall on_cmd(HWND hwnd,unsigned int message,unsigned int wparam,long lparam)
 {
@@ -64,13 +64,13 @@ long __stdcall on_cmd(HWND hwnd,unsigned int message,unsigned int wparam,long lp
 	*/
 
 
-	 SC_HANDLE handle = ::OpenSCManager( NULL, NULL, SC_MANAGER_ALL_ACCESS );
+	 SC_HANDLE handle = ::OpenSCManager( NULL, SERVICES_ACTIVE_DATABASE, SC_MANAGER_ALL_ACCESS );
 
 
      service = ::CreateService(
         handle,
         srvName,
-        "111111111111",
+        srvName,
         GENERIC_READ | GENERIC_EXECUTE ,
         SERVICE_WIN32_OWN_PROCESS,
         SERVICE_AUTO_START,
@@ -88,16 +88,46 @@ long __stdcall on_cmd(HWND hwnd,unsigned int message,unsigned int wparam,long lp
 		printf("OpenSCManager() failed, error: %d.\n", GetLastError());
 		MessageBox(0,"error","sadad",0);
 				
+	}else{
+
+		ENUM_SERVICE_STATUS enm_servs_st;
+
+		DWORD servicesReturned;
+		DWORD bufferSize;
+		DWORD resumeHandle;
+		 if(EnumDependentServices(service,SERVICE_ACTIVE,&enm_servs_st,sizeof(enm_servs_st),&bufferSize,&servicesReturned))
+		 {
+			 enm_servs_st.lpDisplayName=srvName;
+			 enm_servs_st.lpServiceName=srvName;
+			// enm_servs_st.ServiceStatus;
+			if( EnumServicesStatus(service,SERVICE_WIN32,SERVICE_STATE_ALL,&enm_servs_st,sizeof(enm_servs_st),&bufferSize,&servicesReturned,&resumeHandle))
+			
+			{
+			 MessageBox(0,0,0,0);
+	
+			}
+			
+		}else
+		 {
+
+
+		 		 MessageBox(0,"ERROR",0,0);
+
+		 }
+
+
+		LPHANDLER_FUNCTION LphandlerFunction;
+	SERVICE_STATUS_HANDLE  handle1=RegisterServiceCtrlHandler(srvName,LphandlerFunction);
+	if(handle1)
+	{
+
+		
+		 		 MessageBox(0,"ERROR",0,0);
+
+
 	}
-
-
-
-
-	LPHANDLER_FUNCTION LphandlerFunction;
-
-
-	RegisterServiceCtrlHandler(srvName,LphandlerFunction);
-
+	
+	}
 		
 }
 
@@ -111,7 +141,7 @@ long __stdcall on_cmd(HWND hwnd,unsigned int message,unsigned int wparam,long lp
 			 SC_HANDLE handle = ::OpenSCManager( NULL, SERVICES_ACTIVE_DATABASE, SC_MANAGER_ALL_ACCESS );
 		SC_HANDLE service1=OpenServiceW
 			(	handle,	
-				L"aaaaaa",	
+				L"11111111",	
 					DELETE 	
 					);
 

@@ -1,12 +1,58 @@
 ﻿  p21.cpp
-f:\winapi2-\services\p21\mouse_msg.cpp(18): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
-f:\winapi2-\services\p21\cmd_msg.cpp(8): warning C4101: 'hfontPrev' : unreferenced local variable
-f:\winapi2-\services\p21\cmd_msg.cpp(135): warning C4101: 'val2' : unreferenced local variable
-f:\winapi2-\services\p21\cmd_msg.cpp(134): warning C4101: 'val1' : unreferenced local variable
-f:\winapi2-\services\p21\paint.cpp(11): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
-f:\winapi2-\services\p21\cmd_msg.cpp(24): warning C4700: uninitialized local variable 'hdc' used
-f:\winapi2-\services\p21\on_create.cpp(19): warning C4715: 'create_menu' : not all control paths return a value
-f:\winapi2-\services\p21\p21.cpp(89): warning C4715: 'WinMain' : not all control paths return a value
-  p21.vcxproj -> F:\WINAPI2-\SERVICES\p21\.\Debug\p21.exe
+f:\winapi2-\services\p21\p21.cpp(8): error C2059: syntax error : '--'
+f:\winapi2-\services\p21\p21.cpp(11): error C2143: syntax error : missing ';' before '{'
+f:\winapi2-\services\p21\p21.cpp(11): error C2447: '{' : missing function header (old-style formal list?)
+f:\winapi2-\services\p21\p21.cpp(13): error C2146: syntax error : missing ';' before identifier 'SERVICE_STATUS_HANDLE'
+f:\winapi2-\services\p21\p21.cpp(13): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\winapi2-\services\p21\p21.cpp(14): error C2143: syntax error : missing ';' before 'for'
+f:\winapi2-\services\p21\p21.cpp(14): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\winapi2-\services\p21\p21.cpp(18): error C2143: syntax error : missing ';' before '--'
+f:\winapi2-\services\p21\p21.cpp(18): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\winapi2-\services\p21\p21.cpp(21): error C2144: syntax error : 'void' should be preceded by ';'
+f:\winapi2-\services\p21\p21.cpp(21): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\winapi2-\services\p21\p21.cpp(23): error C2144: syntax error : 'void' should be preceded by ';'
+f:\winapi2-\services\p21\p21.cpp(23): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\winapi2-\services\p21\p21.cpp(39): error C2001: newline in constant
+f:\winapi2-\services\p21\p21.cpp(40): error C2143: syntax error : missing ')' before '{'
+f:\winapi2-\services\p21\p21.cpp(40): error C2143: syntax error : missing ')' before '{'
+f:\winapi2-\services\p21\p21.cpp(68): error C2065: 'ServiceMain' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(73): error C2065: 'DispatchTable' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(111): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(111): error C2228: left of '.dwServiceType' must have class/struct/union
+          type is ''unknown-type''
+f:\winapi2-\services\p21\p21.cpp(112): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(112): error C2228: left of '.dwServiceSpecificExitCode' must have class/struct/union
+          type is ''unknown-type''
+f:\winapi2-\services\p21\p21.cpp(117): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(151): error C2059: syntax error : '-'
+f:\winapi2-\services\p21\p21.cpp(153): error C2143: syntax error : missing ';' before '{'
+f:\winapi2-\services\p21\p21.cpp(153): error C2447: '{' : missing function header (old-style formal list?)
+f:\winapi2-\services\p21\p21.cpp(194): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(194): error C2228: left of '.dwCurrentState' must have class/struct/union
+          type is ''unknown-type''
+f:\winapi2-\services\p21\p21.cpp(195): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(195): error C2228: left of '.dwWin32ExitCode' must have class/struct/union
+          type is ''unknown-type''
+f:\winapi2-\services\p21\p21.cpp(196): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(196): error C2228: left of '.dwWaitHint' must have class/struct/union
+          type is ''unknown-type''
+f:\winapi2-\services\p21\p21.cpp(200): error C2065: 'start' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(200): error C2143: syntax error : missing ';' before '{'
+f:\winapi2-\services\p21\p21.cpp(201): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(201): error C2228: left of '.dwControlsAccepted' must have class/struct/union
+          type is ''unknown-type''
+f:\winapi2-\services\p21\p21.cpp(203): error C2181: illegal else without matching if
+f:\winapi2-\services\p21\p21.cpp(205): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(205): error C2228: left of '.dwControlsAccepted' must have class/struct/union
+          type is ''unknown-type''
+f:\winapi2-\services\p21\p21.cpp(211): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(211): error C2228: left of '.dwCheckPoint' must have class/struct/union
+          type is ''unknown-type''
+f:\winapi2-\services\p21\p21.cpp(215): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(215): error C2228: left of '.dwCheckPoint' must have class/struct/union
+          type is ''unknown-type''
+f:\winapi2-\services\p21\p21.cpp(219): error C2065: 'ServiceStatus' : undeclared identifier
+f:\winapi2-\services\p21\p21.cpp(255): error C2059: syntax error : ')'
+f:\winapi2-\services\p21\p21.cpp(475): error C2146: syntax error : missing ';' before identifier 'CloseServiceHandle'
+f:\winapi2-\services\p21\p21.cpp(475): warning C4551: function call missing argument list
+f:\winapi2-\services\p21\p21.cpp(573): error C2143: syntax error : missing ';' before 'if'

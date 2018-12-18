@@ -1,0 +1,6 @@
+﻿  main.cpp
+f:\winapi2-\services\ii\ii\main.cpp(202): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+f:\winapi2-\services\ii\ii\main.cpp(202): error C2556: 'int ServiceInit(DWORD,LPTSTR *)' : overloaded function differs only by return type from 'void ServiceInit(DWORD,LPTSTR *)'
+          f:\winapi2-\services\ii\ii\main.cpp(18) : see declaration of 'ServiceInit'
+f:\winapi2-\services\ii\ii\main.cpp(202): error C2371: 'ServiceInit' : redefinition; different basic types
+          f:\winapi2-\services\ii\ii\main.cpp(18) : see declaration of 'ServiceInit'
