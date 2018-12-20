@@ -1,0 +1,44 @@
+12/20/2018, 00:00:48
+    StartService failed, error code = 0
+12/20/2018, 00:00:48
+    StartServiceCtrlDispatcher failed, error code = 1063
+12/20/2018, 00:02:11
+    StartService failed, error code = 0
+12/20/2018, 00:02:11
+    StartServiceCtrlDispatcher failed, error code = 1063
+12/20/2018, 00:18:54
+    StartService failed, error code = 0
+12/20/2018, 00:18:55
+    StartServiceCtrlDispatcher failed, error code = 1063
+12/20/2018, 00:21:15
+    StartService failed, error code = 0
+12/20/2018, 00:21:15
+    StartServiceCtrlDispatcher failed, error code = 1063
+12/20/2018, 00:27:39
+    StartService failed, error code = 0
+12/20/2018, 00:27:39
+    StartServiceCtrlDispatcher failed, error code = 1063
+12/20/2018, 00:28:18
+    Service b_service installed
+12/20/2018, 00:28:36
+    Failed to create service b_service, error code = 1073
+12/20/2018, 00:29:22
+    StartService failed, error code = 0
+12/20/2018, 00:29:22
+    Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\1.exe', error code = 2
+12/20/2018, 00:29:22
+    Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\2.exe', error code = 2
+12/20/2018, 00:29:22
+    Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\3.exe', error code = 2
+12/20/2018, 00:29:22
+    Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\4.exe', error code = 2
+12/20/2018, 00:30:14
+    StartService failed, error code = 0
+12/20/2018, 00:30:14
+    Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\1.exe', error code = 2
+12/20/2018, 00:30:14
+    Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\2.exe', error code = 2
+12/20/2018, 00:30:14
+    Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\3.exe', error code = 2
+12/20/2018, 00:30:14
+    Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\4.exe', error code = 2

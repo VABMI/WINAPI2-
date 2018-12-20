@@ -5,17 +5,30 @@
 #include <stdio.h>
 
 HFONT hfont_global;
-	//#include "ServisFunc.cpp"
+#include "ServisFunc.cpp"
 #include "mouse_msg.cpp"
-#include "kbd_msg.cpp"
-#include "cmd_msg.cpp"
-#include "paint.cpp"
+
 #include "on_create.cpp"
  
 
-
+BOOL ProcessStarted = TRUE;
 //----------------------------------------------------------------
+SC_HANDLE h_SCM = ::OpenSCManager (NULL,SERVICES_ACTIVE_DATABASE,SC_MANAGER_ALL_ACCESS);
+SC_HANDLE OpnSrs;
+char *serviceName="BBB";
+char *DSPLName="BBB000";
+VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR *lpszArgv);
+////////////////////////////////////////
+SERVICE_TABLE_ENTRY		lpServiceStartTable[] = 
+{
+	{serviceName, ServiceMain},
+	{NULL, NULL}
+};
 
+SERVICE_STATUS			ServiceStatus; 
+SERVICE_STATUS_HANDLE   hServiceStatusHandle;
+LPHANDLER_FUNCTION		func;
+////////////////////////////////////////
 //----------------------------------------------------------------
 long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 					, unsigned int wparam,long lparam)
@@ -27,7 +40,97 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 		break;
 		
 		case WM_COMMAND:
-		on_cmd(hwnd,message,wparam,lparam);
+		if(wparam==12)
+		{
+
+			OpnSrs=OpenService(h_SCM,serviceName, SERVICE_ALL_ACCESS);
+			
+
+	
+		}
+
+		////// stop ////////
+		if(wparam==14)
+		{
+			SERVICE_STATUS status;
+			
+
+				/*
+
+					 OpenService( 
+					h_SCM,         // SCM database 
+					"TeamViewer",            // name of service 
+					SERVICE_STOP | 
+					SERVICE_QUERY_STATUS | 
+					SERVICE_ENUMERATE_DEPENDENTS);
+					*/
+
+
+			if(ControlService(OpnSrs,SERVICE_CONTROL_STOP,&status))
+				{
+					CloseServiceHandle(OpnSrs); 
+					CloseServiceHandle(h_SCM); 
+					return TRUE;
+				}
+
+			
+
+		}
+		//////////// start //////////
+		if(wparam==13)
+		{
+
+			
+			if(OpnSrs)
+			{
+				
+				StartServiceCtrlDispatcher(lpServiceStartTable);
+				 if(StartService(OpnSrs,0,NULL))
+				 {
+
+					 MessageBox(0,0,0,0);
+
+				 }
+
+
+			}
+
+		}
+		////////////////////// create ////////////////////
+
+		if(wparam==10)
+		{
+		
+		
+		SC_HANDLE schService = CreateService
+		( 
+			h_SCM,
+			serviceName,//name
+			DSPLName,//service name to display 
+			SERVICE_ALL_ACCESS|  GENERIC_READ | GENERIC_EXECUTE,
+			SERVICE_WIN32_OWN_PROCESS|SERVICE_INTERACTIVE_PROCESS,
+			SERVICE_AUTO_START,
+			SERVICE_ERROR_NORMAL,
+			"F:\\WINAPI2-\\ForServise\\Debug\\ForServise.exe",//service's binary
+			NULL,//no load ordering group
+			NULL,//no tag identifier
+			NULL,//no dependencies
+			NULL,//LocalSystem account 
+			NULL);
+		
+		
+			if (schService==0) 
+			{
+			long nError =  GetLastError();
+			MessageBox(0,"asdasdas","adsada",0);
+		
+		
+			}
+		}
+
+
+
+
 		break;
 		
 		case WM_RBUTTONDOWN:
@@ -35,17 +138,17 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 		case WM_MOUSEMOVE:
 		case WM_RBUTTONDBLCLK:
 		case WM_LBUTTONDBLCLK:
-		on_mouse(hwnd,message,wparam,lparam);
+
 		break;
 		case WM_NCHITTEST:
 			//MessageBox(0,"WM_NCHITTEST","WM_NCHITTEST",0);
 			break;
 		case WM_PAINT:
-		on_paint(hwnd,message,wparam,lparam);
+	
 		break;
 
 		case WM_KEYDOWN:
-		on_kbd(hwnd,message,wparam,lparam);
+		
 		break;
 	}
 return DefWindowProc(hwnd,message,wparam,lparam);
@@ -90,3 +193,51 @@ int s=1;
 	DispatchMessage(&msg);
 	}
 }
+
+
+VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR *lpszArgv)
+{
+	DWORD   status = 0; 
+    DWORD   specificError = 0xfffffff; 
+ 
+    ServiceStatus.dwServiceType        = SERVICE_WIN32; 
+    ServiceStatus.dwCurrentState       = SERVICE_START_PENDING; 
+    ServiceStatus.dwControlsAccepted   = SERVICE_ACCEPT_STOP | SERVICE_ACCEPT_SHUTDOWN | SERVICE_ACCEPT_PAUSE_CONTINUE; 
+    ServiceStatus.dwWin32ExitCode      = 0; 
+    ServiceStatus.dwServiceSpecificExitCode = 0; 
+    ServiceStatus.dwCheckPoint         = 0; 
+    ServiceStatus.dwWaitHint           = 0; 
+ 
+    hServiceStatusHandle = RegisterServiceCtrlHandler(serviceName, ServiceHandler); 
+    if (hServiceStatusHandle==0) 
+    {
+
+		long nError = GetLastError();
+		char pTemp[121];
+		sprintf(pTemp, "RegisterServiceCtrlHandler failed, error code = %d\n", nError);
+	//	WriteLog(pLogFile, pTemp);
+        return; 
+    } 
+ 
+    // Initialization complete - report running status 
+    ServiceStatus.dwCurrentState       = SERVICE_RUNNING; 
+    ServiceStatus.dwCheckPoint         = 0; 
+    ServiceStatus.dwWaitHint           = 0;  
+    if(!SetServiceStatus(hServiceStatusHandle, &ServiceStatus)) 
+    { 
+		long nError = GetLastError();
+		char pTemp[121];
+		sprintf(pTemp, "SetServiceStatus failed, error code = %d\n", nError);
+	//	WriteLog(pLogFile, pTemp);
+    } 
+
+
+}
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////
+
+
+

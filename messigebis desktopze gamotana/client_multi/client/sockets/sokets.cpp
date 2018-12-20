@@ -4,7 +4,7 @@ void*soketss(SOCKET *sock)
 	
 char *ipin;
 //scanf("%s",&ipin);
-int port = 8786;
+int port = 8080;
 string ipAddress="188.169.18.47";
 cout<<"sheiyvane IP->: ";
 	//cin>>ipAddress;
@@ -50,6 +50,19 @@ if(connResult == SOCKET_ERROR)
 	return;
 	*/
 
+}
+else
+{
+
+	
+	 char IDI2[10];
+	 recv(*sock,IDI2,10,0);
+	 int IDC1=atoi(IDI2);
+	 if(IDC1==0)
+	 {
+		 exit(1); ////tu serverma gamoagzavna anu mianicha 0 indeqsi mashin programa wyvets mushaobas
+	 }
+	 
 }
 
 

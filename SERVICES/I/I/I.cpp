@@ -23,7 +23,7 @@ void ServiceStart(void);
 void ServiceStop(void);
 
 
-int _tmain(int argc, CHAR* argv[])
+int main(int argc, CHAR* argv[])
 {
 	cout<<"In main fun Start"<<endl;
 	BOOL bStServiceCtrlDispatcher=FALSE;
@@ -214,7 +214,7 @@ void ServiceInit(DWORD dwArgc,LPTSTR *apArgv)
 	{
 		ServiceReportStatus(SERVICE_RUNNING,NO_ERROR,0);
 	}
-
+	
 	while(1)
 	{
 		WaitForSingleObject(hServiceEvent,INFINITE);

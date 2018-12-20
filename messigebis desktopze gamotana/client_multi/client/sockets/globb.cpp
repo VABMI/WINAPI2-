@@ -1,5 +1,6 @@
 
-	else if(buf[0]=='A'&&buf[1]=='L'&&buf[2]=='L'){
+	else if(buf[0]=='A'&&buf[1]=='L'&&buf[2]=='L')
+	{
 		//////////////////// yvela kompiuteris gatishvis brdzaneba /////////////////////
 		bytesReceived = recv(sock,buf,4096,0);
 			 if(buf[0]=='~')
@@ -80,3 +81,5 @@
 
 
 	}
+
+

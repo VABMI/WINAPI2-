@@ -25,9 +25,10 @@ void  main()
 	
 	
 ///////////////////// programis identificireba tu meramdene programaa qselshi gashvebuli "numeracia"//
-	char IDI[10];
+	 char IDI[10];
 	 recv(sock,IDI,10,0);
 	 int IDC1=atoi(IDI);
+	
 	// MessageBox(0,IDI,IDI,0);
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 static bool firststart=1;
@@ -52,7 +53,7 @@ do
 		/////////////////////////// individualuri brdzanebebi //////////////////////////////////////
 	if(userInput.size() > 0&&IDC==IDC1) /// IDdebis shedareba 
 	{		memset(buf1,0,sizeof(buf1));
-			strcat(buf1,"PROGRAMA::");
+			strcat(buf1,"PROGRAMA::\0");
 			strcat(buf1,IDI);
 			strcat(buf1,"::ELODEBA BRDZANEBAS\r\n");
 

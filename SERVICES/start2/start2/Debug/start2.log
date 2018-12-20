@@ -1,0 +1,65 @@
+﻿  main.cpp
+f:\winapi2-\services\start2\start2\main.cpp(53): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+f:\winapi2-\services\start2\start2\main.cpp(70): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(73): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(75): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+f:\winapi2-\services\start2\start2\main.cpp(96): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(120): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(126): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(141): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(151): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(159): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(165): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(183): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
+f:\winapi2-\services\start2\start2\main.cpp(201): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(212): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(229): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(247): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(258): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(274): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(291): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(299): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(323): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(336): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(363): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+f:\winapi2-\services\start2\start2\main.cpp(365): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\services\start2\start2\main.cpp(366): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\services\start2\start2\main.cpp(367): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\services\start2\start2\main.cpp(368): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+f:\winapi2-\services\start2\start2\main.cpp(425): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(433): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(452): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+f:\winapi2-\services\start2\start2\main.cpp(487): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
+  LINK : F:\WINAPI2-\SERVICES\start2\Debug\start2.exe not found or not built by the last incremental link; performing full link
+  start2.vcxproj -> F:\WINAPI2-\SERVICES\start2\Debug\start2.exe

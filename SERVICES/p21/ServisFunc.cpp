@@ -1,4 +1,5 @@
 // Main function to be executed as entire service code.
+/*
 SERVICE_STATUS_HANDLE g_ServiceStatusHandle; 
 HANDLE g_StopEvent;
 DWORD g_CurrentState = 0;
@@ -29,13 +30,9 @@ void WINAPI ServiceMain(DWORD argc, LPTSTR *argv)
     // Startup code.
     ReportStatus(SERVICE_START_PENDING);
     g_StopEvent = CreateEvent(NULL, TRUE, FALSE, NULL);
-    /* Here initialize service...
-    Load configuration, acquire resources etc. */
+  
     ReportStatus(SERVICE_RUNNING);
 
-    /* Main service code
-    Loop, do some work, block if nothing to do,
-    wait or poll for g_StopEvent... */
     while (WaitForSingleObject(g_StopEvent, 3000) != WAIT_OBJECT_0)
     {
         // This sample service does "BEEP!" every 3 seconds.
@@ -43,9 +40,7 @@ void WINAPI ServiceMain(DWORD argc, LPTSTR *argv)
     }
 
     ReportStatus(SERVICE_STOP_PENDING);
-    /* Here finalize service...
-    Save all unsaved data etc., but do it quickly.
-    If g_SystemShutdown, you can skip freeing memory etc. */
+
     CloseHandle(g_StopEvent);
     ReportStatus(SERVICE_STOPPED);
 }
@@ -106,7 +101,7 @@ DWORD WINAPI HandlerEx(DWORD control, DWORD eventType, void *eventData, void *co
     }
     return NO_ERROR;
 }
-/*
+
 
 
 int _cdecl main(void)
@@ -157,5 +152,129 @@ int _cdecl main(void)
     }
     
     return 0;
+}
+
+
+
+void ServiceStop(void)
+{
+	cout<<"Inside Service Stop"<<endl;
+	SERVICE_STATUS_PROCESS SvcStatusProcess;
+	SC_HANDLE hScOpenSCManager = NULL;
+	SC_HANDLE hScOpenService = NULL;
+	BOOL bQueryServiceStatus = TRUE;
+	BOOL bControlService = TRUE;
+	DWORD dwBytesNeeded;
+	///I
+	hScOpenSCManager=OpenSCManager(
+		NULL,
+		NULL,
+		SC_MANAGER_ALL_ACCESS);
+	if(NULL==hScOpenSCManager)
+	{
+		cout<<"hScOpenSCManager Faild..."<<GetLastError()<<endl;
+	}
+	else
+	{
+
+		cout<<"hScOpenSCManager Success"<<endl;
+	}
+
+	//II
+	hScOpenService=OpenService(
+		hScOpenSCManager,
+		SERVICE_NAME,
+		SERVICE_ALL_ACCESS);
+	if(NULL==hScOpenService)
+	{
+			cout<<"hScOpenService Failed ="<<GetLastError()<<endl;
+			CloseServiceHandle(hScOpenSCManager);
+	}
+	else
+	{
+			cout<<"hScOpenService Success"<<endl;
+	}
+
+
+	//III
+		bQueryServiceStatus=QueryServiceStatusEx(
+		hScOpenService,
+		SC_STATUS_PROCESS_INFO,
+		(LPBYTE)&SvcStatusProcess,
+		sizeof(SERVICE_STATUS_PROCESS),
+		&dwBytesNeeded);
+		if(FALSE ==bQueryServiceStatus)
+		{
+			cout<<"QueryServiceStatusEx Faild ="<<GetLastError()<<endl;
+			CloseServiceHandle(hScOpenService);
+			CloseServiceHandle(hScOpenSCManager);
+		}
+		else
+		{
+			cout<<"QueryService Success"<<endl;
+				
+		}
+		////// IV////////////////
+
+		bControlService=ControlService(
+			hScOpenService,
+			SERVICE_CONTROL_STOP,
+			(LPSERVICE_STATUS)&SvcStatusProcess
+			
+			);
+		if(TRUE == bControlService)
+		{
+			cout<<"Control Service Success"<<endl;
+		}
+		else
+		{
+			cout<<"Control Service Faild= "<<GetLastError()<<endl;
+			CloseServiceHandle(hScOpenService);
+			CloseServiceHandle(hScOpenSCManager);
+		
+		}
+
+		//////V//////
+		while(SvcStatusProcess.dwCurrentState!=SERVICE_STOPPED)
+		{/// VI
+			bQueryServiceStatus=QueryServiceStatusEx(
+				hScOpenService,
+				SC_STATUS_PROCESS_INFO,
+				(LPBYTE)&SvcStatusProcess,
+				sizeof(SERVICE_STATUS_PROCESS),
+				&dwBytesNeeded);
+
+			if(TRUE == bQueryServiceStatus)
+			{
+				cout<<"bQueryServiceStatus Faild= "<<GetLastError()<<endl;
+				CloseServiceHandle(hScOpenService);
+				CloseServiceHandle(hScOpenSCManager);
+			}
+			else
+			{
+				cout<<"bQueryServiceStatus Success"<<endl;
+
+					
+			}
+			//// VII
+			if(SvcStatusProcess.dwCurrentState == SERVICE_STOPPED)
+			{
+				cout<<"Srvice Stopped Successfully"<<endl;
+				break;
+			}
+			else
+			{
+					cout<<"Service Stop Faild"<<endl;
+						CloseServiceHandle(hScOpenService);
+				CloseServiceHandle(hScOpenSCManager);
+			}
+
+
+		} /// while 
+
+		// VIII
+				CloseServiceHandle(hScOpenService);
+				CloseServiceHandle(hScOpenSCManager);
+				cout<<"Service Stop"<<endl;
 }
 */
