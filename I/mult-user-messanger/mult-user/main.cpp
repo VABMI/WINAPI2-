@@ -36,7 +36,7 @@ void main()
 
 	sockaddr_in hint;
 	hint.sin_family=AF_INET;
-	hint.sin_port=htons(8786);
+	hint.sin_port=htons(8080);
 	hint.sin_addr.S_un.S_addr=INADDR_ANY; /// ver gavige
 
 
@@ -91,7 +91,7 @@ void main()
 				}
 				else
 				{
-					Save(buf,"F:\\WINAPI2-\\I\\mult-user-messanger\\mult-user\\SMS.txt");
+					Save(buf,"D:\\WINAPI2-\\I\\mult-user-messanger\\mult-user\\SMS.txt");
 					//////////////////////////////////////////// userebis gamotana  ACTIVE NOW ////////////////////////////
 					if(buf[0]=='@')
 					{

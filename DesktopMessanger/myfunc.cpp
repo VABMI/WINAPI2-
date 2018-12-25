@@ -120,7 +120,7 @@ void SocketisSheqmna(HWND hwnd)
 		
 char *ipin;
 //scanf("%s",&ipin);
-int port = 8786;
+int port = 8080;
 string ipAddress="127.0.0.1";
 WSAData data;
 WORD ver = MAKEWORD(2,2);

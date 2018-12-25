@@ -19,23 +19,162 @@ HBITMAP LoadPicture(LPCSTR lpszFileName);
 long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 					, unsigned int wparam,long lparam)
 {
+
+	
+			if(WM_USER+200==wparam)
+			{
+
+
+					/////////////////////////////////////////////////////////////////////////
+						HMENU hMenu = ::CreateMenu();
+						HMENU hmenu_popup_file=CreatePopupMenu();
+
+
+							if (NULL != hMenu)
+							{
+								::AppendMenu(hmenu_popup_file, MF_STRING, 1, "Item 1");
+								::AppendMenu(hmenu_popup_file, MF_STRING, 2, "Item 2");
+								::AppendMenu(hmenu_popup_file, MF_STRING, 3, "Item 3");
+							}
+						////////////////////////////////////////////////////////////////////////
+					LPNMITEMACTIVATE	 lpnmitem = (LPNMITEMACTIVATE) lparam;
+
+
+
+					char fgr[100];
+				///	sprintf(fgr,"%d",lpnmitem->iItem);
+				//	MessageBox(hwnd,fgr,"Asdas",0);
+
+					if(lpnmitem->iItem!=-1)
+					{
+					::TrackPopupMenuEx(hmenu_popup_file, TPM_CENTERALIGN | TPM_RETURNCMD,lpnmitem->ptAction.x,lpnmitem->ptAction.y+100,GetDlgItem(hwnd,369),NULL);
+					
+					
+					
+					
+					//MessageBox(hwnd,"Asdad","asdasd",0);
+					}
+
+			}
+
+
+if ( message==WM_USER+200)
+  {
+	  if(LOWORD(lparam)==WM_RBUTTONDOWN)
+	  {
+  		
+					/////////////////////////////////////////////////////////////////////////
+						HMENU hMenu = ::CreateMenu();
+						HMENU hmenu_popup_file=CreatePopupMenu();
+
+
+							if (NULL != hMenu)
+							{
+								::AppendMenu(hmenu_popup_file, MF_STRING, 1, "Item 1");
+								::AppendMenu(hmenu_popup_file, MF_STRING, 2, "Item 2");
+								AppendMenu(hmenu_popup_file, MF_STRING, 3, "Item 3");
+								if(AppendMenu(hmenu_popup_file, MF_STRING, 3, "Item 3"))	
+								{
+									::TrackPopupMenuEx(hmenu_popup_file, TPM_CENTERALIGN | TPM_RETURNCMD,0,0,hwnd,NULL);
+
+								}
+							}
+						////////////////////////////////////////////////////////////////////////
+						//	LPNMITEMACTIVATE	 lpnmitem = (LPNMITEMACTIVATE) lparam;
+
+
+
+					char fgr[100];
+					///sprintf(fgr,"%d",lpnmitem->iItem);
+				//	MessageBox(hwnd,fgr,"Asdas",0);
+
+				//	if(lpnmitem->iItem!=-1)
+				
+
+
+	  }
+
+  }
+
+
+
 	switch(message)
 	{
+
+
+		
 
 		#include "Wm_notify.cpp"
 
 
 		break;
 		case WM_CREATE:
-			{RECT r;
-			GetClientRect(GetDesktopWindow(),&r);
-			int X=r.right-350,Y=0,W=350,H=r.bottom-40;
-			 hBitmap01 = (HBITMAP)LoadImage(NULL, "11.bmp", IMAGE_BITMAP, W,H, LR_LOADFROMFILE);
-		on_create(hwnd,message,wparam,lparam);
+			{
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+				
+			  // handle to icon
+				 HBITMAP hIcon;
+			  // text for tool tip
+				 char lpszTip[] = "Mouse is on the Icon !!";
+ 
+			//	 HINSTANCE hInst =
+				//	 AfxFindResourceHandle(MAKEINTRESOURCE(IDI_ICON1),RT_GROUP_ICON);
+
+				 hIcon = (HBITMAP)LoadImage( NULL,
+										   "D:\\WINAPI1-\\icon\\Debug\\Itzikgur-My-Seven-Downloads-2.ico",
+										   IMAGE_ICON,
+										   16,
+										   16,
+										   LR_LOADFROMFILE);
+
+
+
+
+
+			///	 (HBITMAP)LoadImage(NULL,"C:\\Users\\vaxoa\\OneDrive\\Desktop\\icon\\MARBLES.BMP", IMAGE_BITMAP,300,300, LR_LOADFROMFILE);
+				 if(hIcon)
+				 {
+    
+					  // set NOTIFYCONDATA structure
+ 
+						 NOTIFYICONDATA tnid;
+ 
+						 tnid.cbSize = sizeof(NOTIFYICONDATA);
+						 tnid.hWnd = hwnd;
+						 tnid.uID = 0;
+						 tnid.uFlags = NIF_MESSAGE | NIF_ICON | NIF_TIP;
+						 tnid.uCallbackMessage = WM_USER+200; // my user message
+						 tnid.hIcon =(HICON) hIcon;
+						
+						 if (lpszTip)
+							lstrcpyn(tnid.szTip, lpszTip, sizeof(tnid.szTip));
+						 else
+							tnid.szTip[0] = '\0';
+ 
+					  // call to Shell_NotifyIcon with NIM_ADD parameter
+ 
+						 Shell_NotifyIcon(NIM_ADD, &tnid);
+ 
+					  // free icon 
+ 
+						 ///if (hIcon) 
+					//	 DestroyIcon(hIcon); 
+				 }
+			
+
+				//////////////////////////////////////////////////////////////////////////////////
+				RECT r;
+				GetClientRect(GetDesktopWindow(),&r);
+				int X=r.right-350,Y=0,W=350,H=r.bottom-40;
+				hBitmap01 = (HBITMAP)LoadImage(NULL, "11.bmp", IMAGE_BITMAP, W,H, LR_LOADFROMFILE);
+				on_create(hwnd,message,wparam,lparam);
 			}
 		break;
 		
 		case WM_COMMAND:
+
+
 		on_cmd(hwnd,message,wparam,lparam);
 		break;
 		
@@ -179,7 +318,7 @@ HwndParent=hwnd;
 
 		ShowWindow(hwnd, SW_SHOWDEFAULT);
 		UpdateWindow(hwnd);
-SocketisSheqmna(hwnd);
+		SocketisSheqmna(hwnd);
 
 
 
