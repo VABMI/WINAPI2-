@@ -1,12 +1,45 @@
-﻿Build started 12/25/2018 9:32:40 PM.
+﻿Build started 12/26/2018 6:11:23 PM.
      1>Project "D:\WINAPI2-\messigebis desktopze gamotana\client_multi\client\sockets\sockets.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\sockets.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         All outputs are up-to-date.
+         D:\New Folder\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\sokets.cpp(5): warning C4101: 'ipin' : unreferenced local variable
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(4): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(10): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(11): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(15): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(16): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(23): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(105) : see declaration of 'strcpy'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(29): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(31): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(50): warning C4172: returning address of local variable or temporary
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(9): warning C4101: 'bufer' : unreferenced local variable
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(66): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(67): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(68): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\suratisgagzavna.cpp(21): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\suratisgagzavna.cpp(38): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\stdio.h(371) : see declaration of 'sprintf'
        Link:
-         All outputs are up-to-date.
+         D:\New Folder\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\WINAPI2-\messigebis desktopze gamotana\client_multi\client\Debug\sockets.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\sockets.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\WINAPI2-\messigebis desktopze gamotana\client_multi\client\Debug\sockets.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\WINAPI2-\messigebis desktopze gamotana\client_multi\client\Debug\sockets.lib" /MACHINE:X86 Debug\keyloger.obj
+         Debug\main.obj
+         LINK : D:\WINAPI2-\messigebis desktopze gamotana\client_multi\client\Debug\sockets.exe not found or not built by the last incremental link; performing full link
          sockets.vcxproj -> D:\WINAPI2-\messigebis desktopze gamotana\client_multi\client\Debug\sockets.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\WINAPI2-\messigebis desktopze gamotana\client_multi\client\Debug\sockets.exe;#1" /manifest Debug\sockets.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file "Debug\sockets.unsuccessfulbuild".
          Touching "Debug\sockets.lastbuildstate".
@@ -14,4 +47,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:00.07
+Time Elapsed 00:00:03.98
