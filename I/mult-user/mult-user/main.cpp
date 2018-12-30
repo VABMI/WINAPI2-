@@ -43,7 +43,7 @@ void main()
 	listen(listening,SOMAXCONN);
 
 
-	int count=0;
+	int count=1;
 
 	fd_set master;
 	FD_ZERO(&master);
@@ -54,6 +54,12 @@ void main()
 		int bytesIn;
 		int i;
 	int socketCount;
+	///////////////////// LoadImage.cpp failis ////////////////
+
+	int Size;
+	char *Filesize = new char[1024];
+	int CountFile=0;
+	//////////////////////////////////////////////////////////
 	while(true)
 	{
 		
@@ -96,6 +102,7 @@ void main()
 
 				else if(bytesIn>0)
 				{
+					L:
 
 					for(i=0;i<master.fd_count;i++)
 					{
@@ -127,7 +134,7 @@ void main()
 		//ZeroMemory(&copy,sizeof(copy));
 
 	}
-
+	free(Filesize);
 	WSACleanup();
 }
 

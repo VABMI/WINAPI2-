@@ -10,7 +10,7 @@ int X,Y,W,H;
 DWORD style=WS_VISIBLE|WS_CHILD|WS_BORDER;
 X=0;Y=0;W=80;H=20;
 hw=CreateWindow("button","CREATE",style,X,Y,W,H,hwnd,(HMENU)10,0,0);
-
+CreateWindow("button","ELETE",style,X,Y+150,W,H,hwnd,(HMENU)11,0,0);
 X=100;
 //hw=CreateWindow("edit","DELETE",style,200,Y,200,400,hwnd,(HMENU)20,0,0);
 

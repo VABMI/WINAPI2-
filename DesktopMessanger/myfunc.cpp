@@ -129,7 +129,7 @@ if(wsResult != 0)
 {
 	MessageBox(hwnd,"can't start Winsock, err ","can't start Winsock, err ",0);
 //	cerr<<"can't start Winsock, err "<<wsResult<<endl;
-exit(1);
+///exit(1);
 	return;
 }
 
@@ -139,7 +139,7 @@ if(sock == INVALID_SOCKET)
 {
 
 	MessageBox(hwnd,"can't create socket,Err # ","can't create socket,Err #",0);	
-	exit(1);
+	//exit(1);
 	//cerr <<"can't create socket,Err #"<<WSAGetLastError()<<endl;
 	WSACleanup();
 	return;
@@ -161,7 +161,7 @@ if(connResult == SOCKET_ERROR)
 	closesocket(sock);
 	WSACleanup();
 
-	exit(1);
+	//exit(1);
 	return;
 
 }

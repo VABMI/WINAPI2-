@@ -10,7 +10,8 @@ HFONT hfont_global;
 
 #include "on_create.cpp"
  
-
+#include<iostream>
+using namespace std;
 BOOL ProcessStarted = TRUE;
 //----------------------------------------------------------------
 SC_HANDLE h_SCM = ::OpenSCManager (NULL,SERVICES_ACTIVE_DATABASE,SC_MANAGER_ALL_ACCESS);
@@ -30,6 +31,11 @@ SERVICE_STATUS_HANDLE   hServiceStatusHandle;
 LPHANDLER_FUNCTION		func;
 ////////////////////////////////////////
 //----------------------------------------------------------------
+
+#include"delete.cpp"	
+#include "StopService.cpp"
+#include "start.cpp"
+//----------------------------------------------------------------
 long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 					, unsigned int wparam,long lparam)
 {
@@ -42,30 +48,14 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 		case WM_COMMAND:
 		if(wparam==12)
 		{
-
 			OpnSrs=OpenService(h_SCM,serviceName, SERVICE_ALL_ACCESS);
-			
-
-	
 		}
 
 		////// stop ////////
 		if(wparam==14)
-		{
+		{ 
+	///
 			SERVICE_STATUS status;
-			
-
-				/*
-
-					 OpenService( 
-					h_SCM,         // SCM database 
-					"TeamViewer",            // name of service 
-					SERVICE_STOP | 
-					SERVICE_QUERY_STATUS | 
-					SERVICE_ENUMERATE_DEPENDENTS);
-					*/
-
-
 			if(ControlService(OpnSrs,SERVICE_CONTROL_STOP,&status))
 				{
 					CloseServiceHandle(OpnSrs); 
@@ -81,19 +71,7 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 		{
 
 			
-			if(OpnSrs)
-			{
-				
-				StartServiceCtrlDispatcher(lpServiceStartTable);
-				 if(StartService(OpnSrs,0,NULL))
-				 {
-
-					 MessageBox(0,0,0,0);
-
-				 }
-
-
-			}
+		
 
 		}
 		////////////////////// create ////////////////////
@@ -129,7 +107,13 @@ long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message
 		}
 
 
+		if(11==wparam)
+		{
 
+
+			ServiceDelete();
+
+		}
 
 		break;
 		
@@ -208,7 +192,7 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR *lpszArgv)
     ServiceStatus.dwCheckPoint         = 0; 
     ServiceStatus.dwWaitHint           = 0; 
  
-    hServiceStatusHandle = RegisterServiceCtrlHandler(serviceName, ServiceHandler); 
+    hServiceStatusHandle = RegisterServiceCtrlHandler(serviceName, func); 
     if (hServiceStatusHandle==0) 
     {
 
@@ -238,6 +222,4 @@ VOID WINAPI ServiceMain(DWORD dwArgc, LPTSTR *lpszArgv)
 
 
 ///////////////////////////////////////////////////////////////////////////////////
-
-
 

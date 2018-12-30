@@ -75,7 +75,7 @@ if ( message==WM_USER+200)
 								AppendMenu(hmenu_popup_file, MF_STRING, 3, "Item 3");
 								if(AppendMenu(hmenu_popup_file, MF_STRING, 3, "Item 3"))	
 								{
-									::TrackPopupMenuEx(hmenu_popup_file, TPM_CENTERALIGN | TPM_RETURNCMD,0,0,hwnd,NULL);
+									::TrackPopupMenuEx(hmenu_popup_file, TPM_CENTERALIGN | TPM_RETURNCMD,1090,700,hwnd,NULL);
 
 								}
 							}

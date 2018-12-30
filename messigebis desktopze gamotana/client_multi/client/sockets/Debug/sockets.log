@@ -1,4 +1,4 @@
-﻿Build started 12/27/2018 1:36:47 AM.
+﻿Build started 12/27/2018 10:43:17 AM.
      1>Project "D:\WINAPI2-\messigebis desktopze gamotana\client_multi\client\sockets\sockets.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating "Debug\sockets.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -23,16 +23,11 @@
                  d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
      1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(50): warning C4172: returning address of local variable or temporary
      1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\filesearch.cpp(9): warning C4101: 'bufer' : unreferenced local variable
-     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(26): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
-     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(37): warning C4129: 'P' : unrecognized character escape sequence
-     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(37): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
-     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(89): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
      1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(90): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
      1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(91): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
+     1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\main.cpp(92): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\new folder\vc\include\string.h(110) : see declaration of 'strcat'
      1>d:\winapi2-\messigebis desktopze gamotana\client_multi\client\sockets\suratisgagzavna.cpp(21): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  d:\new folder\vc\include\stdio.h(234) : see declaration of 'fopen'
@@ -52,4 +47,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.61
+Time Elapsed 00:00:58.13

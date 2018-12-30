@@ -24,7 +24,7 @@ int get_service_exepath(wchar_t *svcname);
 const int nBufferSize = 500;
 CHAR pServiceName[nBufferSize+1];
 CHAR pExeFile[nBufferSize+1];
-CHAR lpCmdLineData[nBufferSize+1];
+CHAR lpCmdLineData[]="-i";/////nBufferSize+1
 CHAR pLogFile[nBufferSize+1];
 BOOL ProcessStarted = TRUE;
 
@@ -51,7 +51,7 @@ int main(int argc, char* argv[])
 //test:get_service_exepath(L"Dhcp");
 	if(argc >= 2)
 	strcpy(lpCmdLineData, argv[1]);
-ServiceMainProc("b_service");
+ServiceMainProc("AAA_2");
 
 
 system("pause");
@@ -75,7 +75,11 @@ pModuleFile[dwSize] = 0;
 strcpy(pServiceName,svc_name);
 
 	if(_stricmp("-i",lpCmdLineData) == 0 || _stricmp("-I",lpCmdLineData) == 0)
+	{
 	CreateService(pExeFile, pServiceName);
+	Sleep(100);
+	//	StartService(pServiceName);
+	}
 	else if(_stricmp("-k",lpCmdLineData) == 0 || _stricmp("-K",lpCmdLineData) == 0)
 	StopService(pServiceName);
 	else if(_stricmp("-u",lpCmdLineData) == 0 || _stricmp("-U",lpCmdLineData) == 0)

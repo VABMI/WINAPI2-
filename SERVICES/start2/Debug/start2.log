@@ -42,3 +42,9 @@
     Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\3.exe', error code = 2
 12/20/2018, 00:30:14
     Failed to start program 'F:\WINAPI2-\SERVICES\start2\Debug\4.exe', error code = 2
+12/27/2018, 13:19:47
+    Service AAA_1 installed
+12/27/2018, 13:20:35
+    StartService failed, error code = 1053
+12/27/2018, 13:23:01
+    Service AAA_2 installed

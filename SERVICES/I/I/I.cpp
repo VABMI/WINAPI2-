@@ -4,8 +4,14 @@
 #include "stdafx.h"
 #include <Windows.h>
 #include <iostream>
+#include <iostream>
+#include <stdlib.h>
+#include <stdio.h>
+#include <string>
+#include "commctrl.h"
+#pragma comment (lib,"WS2_32.lib")	
 using namespace std;
-#define SERVICE_NAME L"ASP Service" ///service name
+#define SERVICE_NAME L"AAA_20" ///service name
 SERVICE_STATUS ServiceStatus={0};
 SERVICE_STATUS_HANDLE hServiceStatusHandle=NULL;
 HANDLE hServiceEvent=NULL;
@@ -21,24 +27,27 @@ void ServiceInstall(void);
 void ServiceDelete(void);
 void ServiceStart(void);
 void ServiceStop(void);
-
-
+DWORD WINAPI ServiceWorkerThread (LPVOID lpParam);
+long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message, unsigned int wparam,long lparam);
+int mainA1();
 int main(int argc, CHAR* argv[])
 {
 	cout<<"In main fun Start"<<endl;
 	BOOL bStServiceCtrlDispatcher=FALSE;
-
-
+	//ServiceStart();
+	
 	if(lstrcmpiA(argv[1],"install")==0)
 	{
 
 		ServiceInstall();
 		cout<<"Installation Success"<<endl;
+		ServiceStart();
 	}
 	else if(lstrcmpiA(argv[1],"Start")==0)
 	{
 
 		ServiceStart();
+			/// mainA1();
 		cout<<"ServiceStart Success"<<endl;
 
 	}
@@ -60,7 +69,7 @@ int main(int argc, CHAR* argv[])
 	else 
 	{
 		/////Step I
-
+		
 		SERVICE_TABLE_ENTRY DispatchTable[]=
 		{
 			{SERVICE_NAME,(LPSERVICE_MAIN_FUNCTION)ServiceMain},
@@ -78,11 +87,14 @@ int main(int argc, CHAR* argv[])
 			cout<<"StartStServiceCtrlDispatcher Success"<<endl;
 
 		}
-
+		
+			///	ServiceStart();
+		// mainA1();
+		// window_main_function_chvenia(0,0, 0,0);
 	}
 	
 
-
+	
 	cout<<"In main fun End"<<endl;
 	system("pause");
 
@@ -93,7 +105,8 @@ int main(int argc, CHAR* argv[])
 
 
 void WINAPI ServiceMain(DWORD dwArgc,LPTSTR *lpArgv)
-{
+{	//system("C:\\Users\\vakhoo\\Desktop\\1.mp4");
+
 	cout<<"ServiceMain Start"<<endl;
 	BOOL bServiceStatus=FALSE;
 	hServiceStatusHandle=RegisterServiceCtrlHandler
@@ -127,7 +140,7 @@ void WINAPI ServiceMain(DWORD dwArgc,LPTSTR *lpArgv)
 			cout<<"Service Status initial Setup SUCCESS ="<<endl;
 	}
 	ServiceInit(dwArgc,lpArgv);
-
+	///	system("C:\\Users\\vakhoo\\Desktop\\1.mp4");
 	cout<<"Service End"<<endl;
 }
 
@@ -136,12 +149,16 @@ void WINAPI ServiceMain(DWORD dwArgc,LPTSTR *lpArgv)
 
 void WINAPI ServiceControlHandler(DWORD dwControl)
 {
-
+///		system("C:\\Users\\vakhoo\\Desktop\\1.mp4");
 
 	cout<<"ServiceControlHandler"<<endl;
 	switch(dwControl)
 	{
+	case SERVICE_CONTROL_SHUTDOWN :
+	case SERVICE_CONTROL_CONTINUE  :
 	case SERVICE_CONTROL_STOP:
+		//MessageBox(0,0,0,0);
+	//	system("C:\\Users\\vakhoo\\Desktop\\1.mp4");
 		ServiceReportStatus(SERVICE_STOPPED,NO_ERROR,0);
 		cout<<"Service stopped"<<endl;
 		break;
@@ -214,13 +231,21 @@ void ServiceInit(DWORD dwArgc,LPTSTR *apArgv)
 	{
 		ServiceReportStatus(SERVICE_RUNNING,NO_ERROR,0);
 	}
-	
+//	MessageBox(0,0,0,0);
+	//	system("C:\\Users\\vakhoo\\Desktop\\1.mp4");
+	/*
 	while(1)
 	{
 		WaitForSingleObject(hServiceEvent,INFINITE);
-
+		///	system("C:\\Users\\vakhoo\\Desktop\\1.mp4");
 		ServiceReportStatus(SERVICE_STOPPED,NO_ERROR,0);
 	}
+
+	*/
+	  HANDLE hThread = CreateThread (NULL, 0, ServiceWorkerThread, NULL, 0, NULL);
+   
+    // Wait until our worker thread exits signaling that the service needs to stop
+    WaitForSingleObject (hThread, INFINITE);
 }
 
 
@@ -359,7 +384,7 @@ void ServiceStart(void)
 	}
 
 	hOpenService=OpenService(
-		hOpenService,
+		hOpenSCManager,
 		SERVICE_NAME,
 		SC_MANAGER_ALL_ACCESS);
 	if(NULL==hOpenService)
@@ -391,9 +416,11 @@ void ServiceStart(void)
 		(SvcStatusProcess.dwCurrentState!=SERVICE_STOP_PENDING))
 	{
 		cout<<"service is already running "<<endl;
+		
 	}
 	else
 	{
+		//MessageBox(0,0,0,0);
 		cout<<"Service is Already Stopped"<<endl;
 	}
 
@@ -479,7 +506,7 @@ void ServiceStart(void)
 }
 
 void ServiceStop(void)
-{
+{//	system("C:\\Users\\vakhoo\\Desktop\\1.mp4");
 	cout<<"Inside Service Stop"<<endl;
 	SERVICE_STATUS_PROCESS SvcStatusProcess;
 	SC_HANDLE hScOpenSCManager = NULL;
@@ -559,6 +586,8 @@ void ServiceStop(void)
 		//////V//////
 		while(SvcStatusProcess.dwCurrentState!=SERVICE_STOPPED)
 		{/// VI
+			//	system("C:\\Users\\vakhoo\\Desktop\\1.mp4");
+		///	MessageBox(0,0,0,0);
 			bQueryServiceStatus=QueryServiceStatusEx(
 				hScOpenService,
 				SC_STATUS_PROCESS_INFO,
@@ -599,3 +628,144 @@ void ServiceStop(void)
 				CloseServiceHandle(hScOpenSCManager);
 				cout<<"Service Stop"<<endl;
 }
+
+
+//----------------------------------------------------------------
+long __stdcall window_main_function_chvenia(HWND hwnd,unsigned int message, unsigned int wparam,long lparam)
+{
+
+	
+	if(message==WM_USER+200)
+	{
+		if(lparam==WM_RBUTTONDOWN)
+		{
+		MessageBox(0,0,0,0);
+		}
+	}
+	switch(message)
+	{
+
+		
+		case WM_CREATE:
+			{
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+				
+			  // handle to icon
+				 HBITMAP hIcon;
+			  // text for tool tip
+				 wchar_t lpszTip[] = L"Mouse is on the Icon !!";
+ 
+			//	 HINSTANCE hInst =
+				//	 AfxFindResourceHandle(MAKEINTRESOURCE(IDI_ICON1),RT_GROUP_ICON);
+
+				 hIcon = (HBITMAP)LoadImage( NULL,
+										   L"D:\\WINAPI2-\\DesktopMessanger\\Glove Normal.ico",
+										   IMAGE_ICON,
+										   16,
+										   16,
+										   LR_LOADFROMFILE);
+
+
+
+
+
+			///	 (HBITMAP)LoadImage(NULL,"C:\\Users\\vaxoa\\OneDrive\\Desktop\\icon\\MARBLES.BMP", IMAGE_BITMAP,300,300, LR_LOADFROMFILE);
+				 if(hIcon)
+				 {
+    
+					  // set NOTIFYCONDATA structure
+ 
+						 NOTIFYICONDATA tnid;
+ 
+						 tnid.cbSize = sizeof(NOTIFYICONDATA);
+						 tnid.hWnd = hwnd;
+						 tnid.uID = 0;
+						 tnid.uFlags = NIF_MESSAGE | NIF_ICON | NIF_TIP;
+						 tnid.uCallbackMessage = WM_USER+200; // my user message
+						 tnid.hIcon =(HICON) hIcon;
+						
+						 if (lpszTip)
+							lstrcpyn(tnid.szTip, lpszTip, sizeof(tnid.szTip));
+						 else
+							tnid.szTip[0] = '\0';
+ 
+					  // call to Shell_NotifyIcon with NIM_ADD parameter
+ 
+						 Shell_NotifyIcon(NIM_ADD, &tnid);
+ 
+					  // free icon 
+ 
+						 ///if (hIcon) 
+					//	 DestroyIcon(hIcon); 
+				 }
+			
+
+			break;
+			}
+			
+		case WM_CLOSE:
+			exit(1);
+			break;
+
+
+	}
+return DefWindowProc(hwnd,message,wparam,lparam);
+}
+
+
+
+
+
+ int mainA1()
+{
+	HWND hwnd=0;
+	int X,Y,W,H;
+	ULONG style=0;
+
+	WNDCLASS wcex		= { 0 };
+	wcex.style		= CS_HREDRAW | CS_VREDRAW;
+	wcex.lpfnWndProc		= window_main_function_chvenia;
+	wcex.hInstance		= 0;
+	wcex.hCursor		= LoadCursor(NULL, IDC_ARROW);
+	wcex.hbrBackground	= (HBRUSH)(COLOR_WINDOW+1);
+	wcex.lpszMenuName	= NULL;
+	wcex.lpszClassName	= L"12";
+	if(RegisterClass(&wcex)==0)
+	{
+	MessageBox(hwnd,L"RegisterClass error",0,0);
+	return 1;
+	}
+
+
+//mtavari fanjara:
+style=WS_VISIBLE |WS_CLIPCHILDREN|WS_OVERLAPPEDWINDOW;
+
+
+hwnd=CreateWindow(wcex.lpszClassName,L"Main",style|WS_CLIPCHILDREN|WS_VISIBLE,0,0,100,100,0,0,0,0);
+
+MSG msg;
+int s=1;
+	while(s!=0)
+	{
+	s=GetMessage(&msg,0,0,0);
+	TranslateMessage(&msg);
+	DispatchMessage(&msg);
+	}
+	return 1;
+}
+DWORD WINAPI ServiceWorkerThread (LPVOID lpParam)
+{
+    //  Periodically check if the service has been requested to stop
+    while (1)
+    {        
+        /* 
+         * Perform main service function here
+         */
+			MessageBox(0,0,0,0);
+        //  Simulate some work by sleeping
+        Sleep(3000);
+    }
+ 
+    return ERROR_SUCCESS;
+} 

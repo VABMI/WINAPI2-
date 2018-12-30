@@ -9,9 +9,8 @@ int main()
 	int i=0;
 	while(1)
 	{
+		MessageBox(0,0,0,0);
 		Sleep(700);
-		i++;
-		printf("%i\n",i);
 	}
 	return 0;
 }
