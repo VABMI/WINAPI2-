@@ -1,5 +1,6 @@
 ﻿#include "head.h"
 #include "notify_msg.cpp"
+
 HFONT hfont_global;
 HWND h;
 HBITMAP bvb;
@@ -9,12 +10,13 @@ HWND hwnd=0;
 	HWND tree;
 	HINSTANCE hInst,g_hInst; // main function handler
 #define WIN32_LEAN_AND_MEAN // this will assume smaller exe
-TV_ITEM tvi;
+
 HTREEITEM Selected;
 
 TV_INSERTSTRUCT tvinsert;  // struct to config out tree control
 
-
+   TV_ITEM tvi; 
+    TV_INSERTSTRUCT tvins; 
 
 
 HTREEITEM Parent;           // Tree item handle
@@ -50,7 +52,9 @@ HWND CreateATreeView(HWND hwndParent);
 #include"create.cpp"
 
 
+
 //======================== 22222222222222=====
+
 /*
 BOOL InitTreeViewImageLists(HWND hwndTV,HWND hw) 
 { 

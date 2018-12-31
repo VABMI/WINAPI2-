@@ -2,8 +2,8 @@ HTREEITEM AddItemToTree(HWND hwndTV, LPSTR lpszItem, int nLevel,int ico_I,int ic
 
 { 
 	static int i=2;
-    TV_ITEM tvi; 
-    TV_INSERTSTRUCT tvins; 
+   // TV_ITEM tvi; 
+//    TV_INSERTSTRUCT tvins; 
     static HTREEITEM hPrev = (HTREEITEM) TVI_FIRST; 
     static HTREEITEM hPrevRootItem = NULL; 
     static HTREEITEM hPrevLev2Item = NULL; 

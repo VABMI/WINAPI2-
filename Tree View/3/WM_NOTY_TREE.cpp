@@ -7,8 +7,43 @@
 				
 					switch(((LPNMHDR)lparam)->code)
 					{
+
 					case NM_RCLICK:
-						MessageBox(hwnd,"RRRR clicked button","RRR clicked button",0);
+						{
+							////////////////////////////////////////////////////////////////////////////////
+								char str[455];
+								NMTREEVIEW* pnmtv =(LPNMTREEVIEW)lparam;
+								TVITEM item;
+								item.hItem=pnmtv->itemNew.hItem;
+								item.mask=TVIF_TEXT;
+								item.pszText=str;
+								item.cchTextMax=455;
+								SendMessage(GetDlgItem(hwnd,123),TVM_GETITEM,0,(LPARAM)&item);
+							//////////////////////////////////////////////////////////////////////////////
+							TV_ITEM bnm;
+
+							HTREEITEM Selected;//=(HTREEITEM)SendDlgItemMessage(hwnd,123,TVM_GETNEXTITEM,TVGN_CARET,(LPARAM)Selected);
+
+							TreeView_GetItem( GetDlgItem(hwnd,123),& bnm);
+								
+
+							 LPNMTREEVIEW nmtv = (LPNMTREEVIEW) lparam;
+
+							  static HTREEITEM hPrev = (HTREEITEM) TVI_FIRST; 
+							  static HTREEITEM hPrevRootItem1 = NULL; 
+							 
+							//tvins.hParent = hPrevRootItem1;
+							tvins.item.lParam=(LPARAM)1;
+							tvins.item.pszText="asdadsadasdsada";
+							tvins.item.cchTextMax=lstrlen("asdadsadasdsada");
+					    //  tvins.item = tvi; 
+					
+							tvins.hParent = nmtv->itemNew.hItem;
+							hPrev = (HTREEITEM) SendMessage(GetDlgItem(hwnd,123), TVM_INSERTITEM,0,(LPARAM) (LPTV_INSERTSTRUCT) &tvins); 
+						//	hPrevRootItem1 = hPrev; 
+							
+					//	MessageBox(hwnd,"RRRR clicked button","RRR clicked button",0);
+						}
 						break;
 					case NM_HOVER:
 						
@@ -16,12 +51,39 @@
 						break;
 
 					case NM_SETFOCUS :
-
+						{
 							// MessageBox(hwnd,"SETFOCUS","SETFOCUS",0);
-						break;
+							 		char str[455];
+								NMTREEVIEW* pnmtv =(LPNMTREEVIEW)lparam;
+								TVITEM item;
+								item.hItem=pnmtv->itemNew.hItem;
+								item.mask=TVIF_TEXT;
+								item.pszText=str;
+								item.cchTextMax=455;
+								SendMessage(GetDlgItem(hwnd,123),TVM_GETITEM,0,(LPARAM)&item);	
+
+								//if(tvi.cChildren==0)
+								SendDlgItemMessage(GetDlgItem(hwnd,123),1,
+							TVM_DELETEITEM,TVGN_CARET,(LPARAM)item.hItem);
+								//////////////////////////////////////
+								  static HTREEITEM hPrev = (HTREEITEM) TVI_FIRST; 
+							  static HTREEITEM hPrevRootItem1 = NULL; 
+							 
+							tvins.hParent = hPrevRootItem1;
+							tvins.item.lParam=(LPARAM)1;
+							tvins.item.pszText="asdadsadasdsada";
+							tvins.item.cchTextMax=lstrlen("asdadsadasdsada");
+					      tvins.item = tvi; 
+					
+							tvins.hParent =(HTREEITEM) item.hItem;
+							hPrev = (HTREEITEM) SendMessage(GetDlgItem(hwnd,123), TVM_INSERTITEM,0,(LPARAM) (LPTV_INSERTSTRUCT) &tvins); 
+							hPrevRootItem1 = hPrev; 	
+							break;
+						}
+					
 					case TVN_ITEMEXPANDING :
 
-						MessageBox(hwnd,"++ --","++ --",0);
+					//	MessageBox(hwnd,"++ --","++ --",0);
 						
 						break;
 
