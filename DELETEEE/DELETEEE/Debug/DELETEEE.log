@@ -1,0 +1,20 @@
+﻿Build started 1/13/2019 6:13:44 AM.
+     1>Project "D:\WINAPI2-\DELETEEE\DELETEEE\DELETEEE.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Debug\DELETEEE.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+         D:\New Folder\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\DELETEEE.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt DELETEEE.cpp
+         DELETEEE.cpp
+       ManifestResourceCompile:
+         All outputs are up-to-date.
+       Link:
+         D:\New Folder\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\WINAPI2-\DELETEEE\Debug\DELETEEE.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\DELETEEE.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\WINAPI2-\DELETEEE\Debug\DELETEEE.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\WINAPI2-\DELETEEE\Debug\DELETEEE.lib" /MACHINE:X86 Debug\DELETEEE.exe.embed.manifest.res
+         Debug\DELETEEE.obj
+         Debug\stdafx.obj
+     1>sfml-audio-d.lib(sfml-audio-d-2.dll) : fatal error LNK1112: module machine type 'x64' conflicts with target machine type 'X86'
+     1>Done Building Project "D:\WINAPI2-\DELETEEE\DELETEEE\DELETEEE.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:04.32
