@@ -237,10 +237,10 @@ DWORD WINAPI SEND(HWND sock1,char *name)
 			if(sendResult == SOCKET_ERROR)
 			{
 			
-
-				MessageBox(0,"Serveri gaitisha","error",0);
-				SocketisSheqmna(hwnd);
-				return 0;
+				SendMessage(GetDlgItem(hwnd,21),EM_REPLACESEL,strlen(sendU),(LPARAM)sendU);
+				//MessageBox(0,"Serveri gaitisha","error",0);
+			//	SocketisSheqmna(hwnd); ///soketis xeltavin gmozxeb kavshiris dakargvis shemtxvevashi
+				return 1;
 
 			}
 			else{

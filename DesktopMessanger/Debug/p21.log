@@ -1,4 +1,4 @@
-﻿Build started 12/27/2018 11:50:13 AM.
+﻿Build started 1/14/2019 10:45:52 AM.
      1>Project "D:\WINAPI2-\DesktopMessanger\p21.vcxproj" on node 2 (build target(s)).
      1>InitializeBuildStatus:
          Creating ".\Debug\p21.unsuccessfulbuild" because "AlwaysCreate" was specified.
@@ -50,4 +50,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.81
+Time Elapsed 00:00:06.58

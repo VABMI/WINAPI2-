@@ -1,5 +1,5 @@
 				else if(buf[0]=='I'&&buf[1]=='M'&&buf[2]=='G'&&buf[3]=='C')
-				{
+				{		static int CountFile=0;
 						ZeroMemory(Filesize,sizeof(Filesize));
 
 						if(recv(sock, Filesize, 1024, 0)) // File size
